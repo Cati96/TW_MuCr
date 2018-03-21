@@ -2,183 +2,303 @@
 <html lang="en">
 
 <head>
-    <title>RPG game</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+	<title>Maior Game</title>
+    
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+    
+	<link rel="icon" href="favicon.ico" type="image/x-icon" /> </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <button type="button" class="btn btn-primary" style="width: 100%;">BANI : <span id="bani"></span></button>
-            </div>
-            <div class="col-sm-3">
-                <button type="button" class="btn btn-primary" style="width: 100%;">POPULATIE : <span id="populatie"></span></button>
-            </div>
-            <div class="col-sm-3">
-                <button type="button" class="btn btn-primary" style="width: 100%;">CURENT : <span id="curent"></span></button>
-            </div>
-            <div class="col-sm-3">
-                <button type="button" class="btn btn-primary" style="width: 100%;">UTILITATI : <span id="apa"></span></button>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="1"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="2"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="3"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="4"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="5"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="6"></div>
-            </div>
-        </div>
-        <div class="row" style="margin-right: -60px;margin-left: 0px;">
-            <div class="col-sm-2 row sector">
-                <div class="col-sm-6 space free" id="7"></div>
-                <div class="col-sm-6 space free" id="8"></div>
-                <div class="col-sm-6 space free" id="9"></div>
-                <div class="col-sm-6 space free" id="10"></div>
-            </div>
-            <div class="col-sm-8 sector">
-                <div class="col-sm-12 space primarie primarie1"> </div>
-            </div>
-            <div class="col-sm-2 row sector">
-                <div class="col-sm-6 space free" id="11"></div>
-                <div class="col-sm-6 space free" id="12"></div>
-                <div class="col-sm-6 space free" id="13"></div>
-                <div class="col-sm-6 space free" id="14"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="15"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="16"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="17"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="18"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="19"></div>
-            </div>
-            <div class="col-sm-2 sector">
-                <div class="col-sm-6 space free" id="20"></div>
-            </div>
-        </div>
-    </div>
-    <div id="builder" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal Constructor case-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Buildings</h4> </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p>Construieste Casa nivel 1 (populatie +2) Cost : 200</p>
-                        <button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="casa">Nivel 1</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste Bloc nivel 1 (populatie +3) Cost : 500 Consuma 0.5 curent si 0.3 apa</p>
-                        <button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="bloc">Nivel 1</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste Epurare nivel 1</p>
-                        <button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="apa">Nivel 1</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste Fabrica nivel 1</p>
-                        <button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="fabrica">Nivel 1</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste Firma IT nivel 1</p>
-                        <button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="it">Nivel 1</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste Firma Termopane nivel 1</p>
-                        <button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="termopane">Nivel 1</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste Rafinarie nivel 1</p>
-                        <button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="rafinarie">Nivel 1</button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="primarie" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal nivel primarie-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Main Hall Builder</h4> </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p>Construieste primaria nivel 1</p>
-                        <button type="button" class="btn btn-default nivPrimarie" data-dismiss="modal" nivel="1">Nivel 1</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste primaria nivel 2 care returneaza de doua ori mai multi bani. Cost 5000</p>
-                        <button type="button" class="btn btn-default nivPrimarie" data-dismiss="modal" nivel="2">Nivel 2</button>
-                    </div>
-                    <div class="row">
-                        <p>Construieste primaria nivel 3 care returneaza de trei ori mai multi bani. Cost 10000</p>
-                        <button type="button" class="btn btn-default nivPrimarie" data-dismiss="modal" nivel="3">Nivel 3</button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="upgrade" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal nivel primarie-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Upgrade</h4> </div>
-                <div class="modal-body upgradeBody">
-                    <div class="row">
-                        <p>Construieste nivel 1</p>
-                        <button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<body data-spy="scroll" data-target=".navbar-custom">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- ============== HEADER =============== -->
+			<header id="home">
+				<!-- Main nav -->
+				<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+					<div class="container">
+						<div class="navbar navbar-header">
+							<a class="navbar-brand navbar-logo" href="#home"></a>
+							<button type="button" class="navbar-toggle custom-toggle-btn" data-toggle="collapse" data-target="#main-nav" aria-expanded="false"> <span class="sr-only">
+                                Toggle navigation
+                                </span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+						</div>
+						<div class="collapse navbar-collapse" id="main-nav">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="plain-link"><a href="#features">Game</a></li>
+								<li class="plain-link"><a href="#gallery">Informatii joc</a></li>
+								<li class="plain-link"><a href="#store">Clasament Jucatori</a></li>
+								<li class="plain-link"><a href="#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<h1>
+                       
+                    </h1> </header>
+		</div>
+		<!-- ============== DIVIDER ============== -->
+		<div class="Divider">
+			<hr class="Divider-rule"> </div>
+		<!-- ============== FEATURES SECTION =============== -->
+		<div class="row pattern">
+			<section class="features body" id="features">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3">
+							<button type="button" class="btn btn-primary" style="width: 100%;">
+								<p>BANI : </p><span id="bani"></span></button>
+						</div>
+						<div class="col-sm-3">
+							<button type="button" class="btn btn-primary" style="width: 100%;">
+								<p>POPULATIE : </p><span id="populatie"></span></button>
+						</div>
+						<div class="col-sm-3">
+							<button type="button" class="btn btn-primary" style="width: 100%;">
+								<p>CURENT : </p><span id="curent"></span></button>
+						</div>
+						<div class="col-sm-3">
+							<button type="button" class="btn btn-primary" style="width: 100%;">
+								<p>UTILITATI : </p><span id="apa"></span></button>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="1"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="2"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="3"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="4"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="5"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="6"></div>
+						</div>
+					</div>
+					<div class="row" style="margin-right: -60px;margin-left: 0px;">
+						<div class="col-sm-2 row sector">
+							<div class="col-sm-6 space free" id="7"></div>
+							<div class="col-sm-6 space free" id="8"></div>
+							<div class="col-sm-6 space free" id="9"></div>
+							<div class="col-sm-6 space free" id="10"></div>
+						</div>
+						<div class="col-sm-8 sector">
+							<div class="col-sm-12 space primarie primarie1"> </div>
+						</div>
+						<div class="col-sm-2 row sector">
+							<div class="col-sm-6 space free" id="11"></div>
+							<div class="col-sm-6 space free" id="12"></div>
+							<div class="col-sm-6 space free" id="13"></div>
+							<div class="col-sm-6 space free" id="14"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="15"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="16"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="17"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="18"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="19"></div>
+						</div>
+						<div class="col-sm-2 sector">
+							<div class="col-sm-6 space free" id="20"></div>
+						</div>
+					</div>
+				</div>
+				<div id="builder" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal Constructor case-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Buildings</h4> </div>
+							<div class="modal-body">
+								<div class="row">
+									<p>Construieste Casa nivel 1 (populatie +2) Cost : 200</p>
+									<button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="casa">Nivel 1</button>
+								</div>
+								<div class="row">
+									<p>Construieste Bloc nivel 1 (populatie +3) Cost : 500 Consuma 0.5 curent si 0.3 apa</p>
+									<button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="bloc">Nivel 1</button>
+								</div>
+								<div class="row">
+									<p>Construieste Epurare nivel 1</p>
+									<button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="apa">Nivel 1</button>
+								</div>
+								<div class="row">
+									<p>Construieste Fabrica nivel 1</p>
+									<button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="fabrica">Nivel 1</button>
+								</div>
+								<div class="row">
+									<p>Construieste Firma IT nivel 1</p>
+									<button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="it">Nivel 1</button>
+								</div>
+								<div class="row">
+									<p>Construieste Firma Termopane nivel 1</p>
+									<button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="termopane">Nivel 1</button>
+								</div>
+								<div class="row">
+									<p>Construieste Rafinarie nivel 1</p>
+									<button type="button" class="btn btn-default construieste" data-dismiss="modal" cladire="rafinarie">Nivel 1</button>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="primarie" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal nivel primarie-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Main Hall Builder</h4> </div>
+							<div class="modal-body">
+								<div class="row">
+									<p>Construieste primaria nivel 1</p>
+									<button type="button" class="btn btn-default nivPrimarie" data-dismiss="modal" nivel="1">Nivel 1</button>
+								</div>
+								<div class="row">
+									<p>Construieste primaria nivel 2 care returneaza de doua ori mai multi bani. Cost 5000</p>
+									<button type="button" class="btn btn-default nivPrimarie" data-dismiss="modal" nivel="2">Nivel 2</button>
+								</div>
+								<div class="row">
+									<p>Construieste primaria nivel 3 care returneaza de trei ori mai multi bani. Cost 10000</p>
+									<button type="button" class="btn btn-default nivPrimarie" data-dismiss="modal" nivel="3">Nivel 3</button>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="upgrade" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal nivel primarie-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Upgrade</h4> </div>
+							<div class="modal-body upgradeBody">
+								<div class="row">
+									<p>Construieste nivel 1</p>
+									<button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- ============== DIVIDER ============== -->
+		<div class="Divider">
+			<hr class="Divider-rule"> </div>
+		<!-- ============== GALLERY SECTION =============== -->
+		<div class="row pattern-dark">
+			<section class="gallery" id="gallery">
+				<div class="container"> 
+					<p align="center">Bine ai venit la <b>War of Maires</b>! Construiește-ți orașul, condu-l cu succes pentru a avea achizițiile de ultimă generație, cercetează noi tehnologii și fii cel mai bun primar dintre rivalii tăi. Acest manual poate fi folosit ca un important sprijin în misiunea ta: aici vei găsi un ghid detaliat referitor la toate informațiile importante din joc și sfaturi valoroase.</p>
+					<p align="center">Calea către succes constă în folosirea chibzuită a resurselor – doar dacă găsești echilibrul corect între venituri și cheltuieli poți debloca noi tehnologii, îți poți dezvolta continuu orașul și vei putea astfel câștiga faimă.</p>
+					<p align="center">Mai întâi, ești liderul unui sat. Cu timpul, te dezvolți – explorezi noi tehnologii și îți transformi micul sat într-o metropolă grandioasă. Jocul este, în mare, împărțit pe nivele, astfel pentru a fi cel mai bun, va trebui să atingi ultimul nivel al jocului. Mult succes!</p>
+				</div>
+			</section>
+		</div>
+		<!-- ============== DIVIDER ============== -->
+		<div class="Divider">
+			<hr class="Divider-rule"> </div>
+		<!-- ============== STORE SECTION =============== -->
+		<div class="row pattern">
+			<section class="store" id="store">
+				<div class="container"> 
+				<p><b>Clasament jucatori:</b></p><br>
+				<p>1. Player1</p>
+				<p>2. Player2</p>
+				<p>3. Player3</p>
+				<p>4. Player4</p>
+				<p>5. Player5</p>
+				</div>
+			</section>
+		</div>
+		<!-- ============== DIVIDER ============== -->
+		<div class="Divider">
+			<hr class="Divider-rule"> </div>
+		<!-- ============== TESTIMONIALS SECTION =============== -->
+		<div class="row">
+			<section class="testimonials" id="testimonials">
+				<div class="container"> </div>
+			</section>
+		</div>
+		<!-- ============== DIVIDER ============== -->
+		<div class="Divider">
+			<hr class="Divider-rule"> </div>
+		<!-- ============== CONTACT SECTION =============== -->
+		<div class="row pattern">
+			<section class="contact" id="contact">
+				<div class="container">
+					<p>Contact: </p><br>
+					<p>Pentru orice întrebări legate de joc, nu ezitați să ne contactați la adresa: warofmaires@gmail.com</p>
+				</div>
+			</section>
+		</div>
+		<!-- ============== DIVIDER ============== -->
+		<div class="Divider">
+			<hr class="Divider-rule"> </div>
+		<!-- ============== FOOTER =============== -->
+		<div class="row pattern-dark">
+			<footer class="container footer">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<nav class="footer-nav">
+							<ul>
+								<li class="plain-link"><a href="#features">Game</a></li>
+								<li class="plain-link"><a href="#gallery">Informatii joc</a></li>
+								<li class="plain-link"><a href="#store">Clasament Jucatori</a></li>
+								<li class="plain-link"><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="row">
+					<p class="copyright"></p>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<!-- ============== SCRIPTS =============== -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-mobile-custom/jquery.mobile.custom.min.js"></script>
+    
+	<script src="js/constante.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/calculator.js"></script>
+    
 </body>
-<script src="assets/js/constante.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/calculator.js"></script>
 
 </html>
