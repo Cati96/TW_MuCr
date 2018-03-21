@@ -47,7 +47,11 @@ function getBid(cladire) {
 
 /*
 Functie specifica jQuery. La producerea evenimentului click pe un anumit spatiu, se verifica daca spatiul este ocupat sau nu. 
+<<<<<<< HEAD
 Daca nu este ocupat atunci pentru id-ul "builder" si clasa "modal" se afiseaza imediat pop-up-ul/modalul cu o lista de constructii disponibile si se preia id-ul curent al casutei/spatiului cand te duci cu mouse-ul.
+=======
+Daca nu este ocupat atunci pentru id-ul "builder" si clasa "modal" se afiseaza imediat pop-up-ul cu o lista de constructii disponibile.
+>>>>>>> 97637efaa9797c39edf880f55257bb13f7c2a3f5
 Altfel, daca este ocupat se face un updgrade la cladire in functie de tipul acesteia: casa, bloc, apa ( statie de epurare), rafinarie, fabrica, it, termopane.
 */
 $('.free').click(function () {
@@ -176,8 +180,12 @@ $('.primarie').click(function () {
 });
 
 /*
-Fucntie specifica jQuer. Functia/eventul click reprezinta activatorul de buton
+Functie specifica jQuer. Functia/eventul click reprezinta activatorul de buton
 */
 $(".construieste").click(function () {
     buildBuilding(curentId, $(this).attr("cladire"), "1");
 });
+
+function tryingToEscapeFromConflicts(){
+    console.log("Trying to escape from conflicts.");
+}
