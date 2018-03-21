@@ -1,4 +1,9 @@
 /*HELPERS*/
+$('#loginbtn').click(function () {
+   
+		 $('#login').show();
+		$('#login').removeClass("fade");
+});
 $(".construieste").click(function(){
 	if($(this).attr("data-dismiss") == "modal"){
 		$(this).parent().parent().parent().parent().parent().hide();
