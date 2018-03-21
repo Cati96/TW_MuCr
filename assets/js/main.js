@@ -47,7 +47,7 @@ function getBid(cladire) {
 
 /*
 Functie specifica jQuery. La producerea evenimentului click pe un anumit spatiu, se verifica daca spatiul este ocupat sau nu. 
-Daca nu este ocupat atunci pentru id-ul "builder" si clasa "modal" se afiseaza imediat pop-up-ul cu o lista de constructii disponibile.
+Daca nu este ocupat atunci pentru id-ul "builder" si clasa "modal" se afiseaza imediat pop-up-ul/modalul cu o lista de constructii disponibile si se preia id-ul curent al casutei/spatiului cand te duci cu mouse-ul.
 Altfel, daca este ocupat se face un updgrade la cladire in functie de tipul acesteia: casa, bloc, apa ( statie de epurare), rafinarie, fabrica, it, termopane.
 */
 $('.free').click(function () {
@@ -176,7 +176,7 @@ $('.primarie').click(function () {
 });
 
 /*
-Atunci cand utilizatorul este nou in joc, nu exista nicio constructie, asadar la un click pe un anumit spatiu se apeleaza functia buildBuilding pentru nivelul 1.
+Fucntie specifica jQuer. Functia/eventul click reprezinta activatorul de buton
 */
 $(".construieste").click(function () {
     buildBuilding(curentId, $(this).attr("cladire"), "1");
