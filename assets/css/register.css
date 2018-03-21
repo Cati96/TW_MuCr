@@ -1,0 +1,231 @@
+body {
+	margin:0px;
+	padding:0px;
+	color: #666;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:13px;
+	line-height:1.5em; 
+	background-color: #fff;
+}
+
+a, a:link, a:visited { color: #000; font-weight: normal; }
+
+a:hover { color: #CC0000; text-decoration:none; }
+
+p { margin: 0px; padding: 0 0 10px 0; }
+
+img { border: none; }
+
+h1 { font-size: 28px; color: #000; margin: 0 0 20px 0; padding: 5px 0; font-weight: normal; }
+h2 { font-size: 22px; color: #000; margin: 0 0 10px 0; padding: 0 0 5px 0; font-weight: normal; }
+
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+.cleaner_h20 { clear: both; width:100%; height: 20px; }
+
+ul { margin: 20px 30px; padding: 0; }
+ul li { padding-bottom: 3px; margin-bottom: 2px; background: url(../homePage_images/ul_list.png) no-repeat center left; }
+ul li a { font-weight: normal; text-decoration: none; }
+
+
+/* header */
+#template_header_wrapper {
+	width: 100%;
+    background: url(../homePage_images/template_header.jpg) repeat-x;
+}
+
+#template_header {
+	width: 930px;
+	height: 108px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+#template_header .header_left {
+	float: left;
+	width: 300px;
+}
+
+#template_header .header_right {
+	float: right;
+	width: 600px;
+}
+
+/* site title */
+
+#template_header  #site_title {
+	float: left;
+	width: 200px;
+	padding: 40px 0 0 0;
+}
+
+
+#site_title a {
+	margin: 0px;
+	padding: 0px;
+	font-size: 26px;
+	color: #ffffff;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#site_title h1 a:hover {
+	font-weight: bold;	
+	text-decoration: none;
+}
+
+#site_title a span {
+	display: block;
+	margin-top: -20px;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
+
+/* end of site title */
+
+/* welcome */
+
+#template_welcome_wrapper {
+	clear: both;
+	width: 100%;
+	height: 130px;
+	background: url(../homePage_images/template_welcome.jpg) repeat-x;
+}
+
+#template_welcome {
+	width: 930px;
+	height: 300px;
+	margin: 0 auto;
+	padding: 15px; 
+	background: url(../homePage_images/template_wlecome_bg.jpg) top right no-repeat;
+}
+
+#welcome_text {
+	float: right;
+	width: 520px;
+	padding-top: 20px;
+}
+
+/* end of welcome */
+
+/* content */
+
+#template_content_wrapper_outer {
+	width: 100%;
+	background: #efefef url(../homePage_images/template_content_top.jpg) repeat-x top;
+}
+
+#template_content_wrapper_inner {
+	width: 100%;
+	background: #efefef  url(../homePage_images/template_content_bottom.jpg) repeat-x bottom;
+}
+
+#template_content_wrapper {
+	width: 930px;
+	margin: 0 auto;
+	padding: 30px 15px;
+}
+
+#template_content {
+	float: center;
+	width: 600px;
+	margin: 0 auto;
+	padding: 30px 15px; 
+}
+
+#template_register
+{
+	border: 2px solid black;
+    border-radius: 10px;
+    padding: 50px 20px;
+    
+}
+label{
+	font-size: 20px;
+	display: block;
+	text-align: left;
+	padding: 10px 15px; 
+}
+
+input{
+
+	width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #696161;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+input::placeholder{
+	color:black;
+}
+
+#template_buttons{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+/* end of content */
+
+
+/* footer */
+
+#template_footer_wrapper {
+	width: 100%;
+	height: 152px;
+	background: url(../homePage_images/template_footer.jpg) repeat-x bottom;
+}
+
+#template_footer {
+	width: 982px;
+	height: 62px;
+	margin: 0 auto;
+	padding: 90px 0 0 0;
+	text-align: center;
+	color: #6a6a6a;
+	
+}
+
+#template_footer a {
+	color: #6a6a6a;
+	font-weight: normal;
+	text-decoration: none;
+}
+#template_footer a:hover {
+	color: #a0a0a0;
+	font-weight: normal;
+	text-decoration: none;
+}
+/* end of footer */
