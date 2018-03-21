@@ -23,13 +23,13 @@ h2 { font-size: 22px; color: #000; margin: 0 0 10px 0; padding: 0 0 5px 0; font-
 .cleaner_h20 { clear: both; width:100%; height: 20px; }
 
 ul { margin: 20px 30px; padding: 0; }
-ul li { padding-bottom: 3px; margin-bottom: 2px; background: url(homePage_images/ul_list.png) no-repeat center left; }
+ul li { padding-bottom: 3px; margin-bottom: 2px; background: url(../homePage_images/ul_list.png) no-repeat center left; }
 ul li a { font-weight: normal; text-decoration: none; }
 
 /* header */
 #template_header_wrapper {
 	width: 100%;
-    background: url(homePage_images/template_header.jpg) repeat-x;
+    background: url(../homePage_images/template_header.jpg) repeat-x;
 }
 
 #template_header {
@@ -121,7 +121,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 
 #template_menu li a:hover, #template_menu li .current {
 	color: #000000;
-	background: url(homePage_images/template_menu_hover.png) no-repeat;
+	background: url(../homePage_images/template_menu_hover.png) no-repeat;
 }
 
 /* end of menu */
@@ -132,7 +132,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 	clear: both;
 	width: 100%;
 	height: 230px;
-	background: url(homePage_images/template_welcome.jpg) repeat-x;
+	background: url(../homePage_images/template_welcome.jpg) repeat-x;
 }
 
 #template_welcome {
@@ -140,7 +140,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 	height: 200px;
 	margin: 0 auto;
 	padding: 15px; 
-	background: url(homePage_images/template_wlecome_bg.jpg) top right no-repeat;
+	background: url(../homePage_images/template_wlecome_bg.jpg) top right no-repeat;
 }
 
 #welcome_image {
@@ -165,7 +165,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 	clear: both;
 	width: 100%;
 	height: 208px;
-	background: url(homePage_images/template_services.jpg) repeat-x;
+	background: url(../homePage_images/template_services.jpg) repeat-x;
 }
 
 #template_more {
@@ -179,7 +179,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 	float: left;
 	width: 250px;
 	padding: 0 30px;
-	background: url(homePage_images/template_vertical_divider.png) no-repeat center right;
+	background: url(../homePage_images/template_vertical_divider.png) no-repeat center right;
 }
 
 .more_box_last {
@@ -192,12 +192,12 @@ ul li a { font-weight: normal; text-decoration: none; }
 
 #template_content_wrapper_outer {
 	width: 100%;
-	background: #efefef url(homePage_images/template_content_top.jpg) repeat-x top;
+	background: #efefef url(../homePage_images/template_content_top.jpg) repeat-x top;
 }
 
 #template_content_wrapper_inner {
 	width: 100%;
-	background: #efefef  url(homePage_images/template_content_bottom.jpg) repeat-x bottom;
+	background: #efefef  url(../homePage_images/template_content_bottom.jpg) repeat-x bottom;
 }
 
 #template_content_wrapper {
@@ -219,15 +219,15 @@ ul li a { font-weight: normal; text-decoration: none; }
 }
 
 #template_content_wrapper .our_game {
-	background: url(homePage_images/Download-folder-48.png) top left no-repeat;
+	background: url(../homePage_images/Download-folder-48.png) top left no-repeat;
 }
 
 #template_content_wrapper .about_us {
-	background: url(homePage_images/Administrator-48.png) top left no-repeat;
+	background: url(../homePage_images/Administrator-48.png) top left no-repeat;
 }
 
 #template_content_wrapper .current_top {
-	background: url(homePage_images/date2-48.png) top left no-repeat;
+	background: url(../homePage_images/date2-48.png) top left no-repeat;
 }
 
 #template_sidebar {
@@ -236,7 +236,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 	width: 240px;
 	margin: 13px 0;
 	padding: 10px 20px;
-	background: url(homePage_images/template_sidebar_bg.png) repeat-y;
+	background: url(../homePage_images/template_sidebar_bg.png) repeat-y;
 }
 
 #template_sidebar .sidebar_top {
@@ -245,7 +245,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 	left: 0;
 	width: 280px;
 	height: 13px;
-	background: url(homePage_images/template_sidebar_top.png) no-repeat;
+	background: url(../homePage_images/template_sidebar_top.png) no-repeat;
 }
 
 #template_sidebar .sidebar_bottom {
@@ -254,7 +254,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 	left: 0;
 	width: 280px;
 	height: 13px;
-	background: url(homePage_images/template_sidebar_bottom.png) no-repeat;
+	background: url(../homePage_images/template_sidebar_bottom.png) no-repeat;
 }
 
 #template_sidebar .top {
@@ -273,7 +273,7 @@ ul li a { font-weight: normal; text-decoration: none; }
 #template_footer_wrapper {
 	width: 100%;
 	height: 152px;
-	background: url(homePage_images/template_footer.jpg) repeat-x bottom;
+	background: url(../homePage_images/template_footer.jpg) repeat-x bottom;
 }
 
 #template_footer {
