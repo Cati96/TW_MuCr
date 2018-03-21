@@ -1,129 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>RPG Game</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative" rel="stylesheet">
-        <link href="fonts/ionicons/2.0.1/css/ionicons.min.css" type="text/css" media="screen" rel="stylesheet">
-        
-        <link href="css/style.css" rel="stylesheet">
-        
-        <script src="js/functions.js"></script>
-
-        <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.html">
-        <link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.html">
-        <link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.html">
-        <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.html">
-        <link rel="apple-touch-icon" sizes="114x114" href="../apple-icon-114x114.html">
-        <link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.html">
-        <link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.html">
-        <link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.html">
-        <link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.html">
-
-        <link rel="manifest" href="https://senseiminimal.github.io/manifest.json">
-
-        <meta name="msapplication-TileColor" content="#181818">
-        <meta name="msapplication-TileImage" content="../ms-icon-144x144.html">
-        <meta name="theme-color" content="#181818">
-
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    </head>
-
-    <body data-spy="scroll" data-target=".navbar-custom">
-        <div class="container-fluid">
-            <div class="row">
-                
-                <!-- ============== HEADER =============== -->
-                <header id="home">
-                    <!-- Main nav -->
-                    <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
-                        <div class="container">
-                            <div class="navbar navbar-header">
-                                <a class="navbar-brand navbar-logo" href="#home"></a>
-
-                                <!-- <button type="button" class="navbar-toggle custom-toggle-btn" data-toggle="collapse" data-target="#main-nav" aria-expanded="false"> <span class="sr-only">
-                                    Toggle navigation
-                                    </span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
-                            </div>
-                            <div class="collapse navbar-collapse" id="main-nav">
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="plain-link"><a href="indexGame.html">Game</a></li>
-                                    <li class="plain-link"><a href="#infos">Informatii joc</a></li>
-                                    <li class="plain-link"><a href="#ranking">Clasament Jucatori</a></li>
-                                    <li class="plain-link"><a href="#contact">Contact</a></li>
-                                    <li class="plain-link"><a href="#logout">Log out</a></li> 
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                 </header>
+        <link href = "css/style.css" rel="stylesheet">
+        <title>RPG GAME HOME</title>
+    </head>  
+    <body>
+        <div id="template_header_wrapper">
+            <div id="template_header">
+                <div class="header_left">
+                    <div id="site_title">
+                    </div>
+                </div>
+                <div class="header_right">
+                    <div id="template_menu">
+                        <ul>
+                            <li><a href="#" class="current">ACASA</a></li>
+                            <li><a href="#game">INTRA IN JOC</a></li>
+                            <li><a href="#ranking">CLASAMENT JUCATORI</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                            <li><a href="#logout">DECONECTARE</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            
-            <!-- ============== DIVIDER ============== -->
-            <div class="Divider">
-                <hr class="Divider-rule"> </div>
-            <!-- ============== INFOS SECTION =============== gallery-->
-            <div class="row pattern-dark">
-                <section class="infos" id="infos">
-                    <div class="container">
-                    </div>
-                </section>
-            </div>
-            
-            <!-- ============== DIVIDER ============== -->
-            <div class="Divider">
-                <hr class="Divider-rule"> </div>
-            <!-- ============== RANKING SECTION =============== store-->
-            <div class="row pattern">
-                <section class="ranking" id="ranking">
-                    <div class="container">
-                    </div>
-                </section>
-            </div>
-            
-            <!-- ============== DIVIDER ============== -->
-            <div class="Divider">
-                <hr class="Divider-rule"> </div>
-            <!-- ============== CONTACT SECTION =============== -->
-            <div class="row pattern">
-                <section class="contact" id="contact">
-                    <div class="container">
-                    </div>
-                </section>
-            </div>
-            
-            <!-- ============== DIVIDER ============== -->
-            <div class="Divider">
-                <hr class="Divider-rule"> </div>
-            <!-- ============== FOOTER =============== -->
-            <div class="row pattern-dark">
-                <footer class="container footer">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6">
-                            <nav class="footer-nav">
-                                <ul>
-                                    <li class="plain-link"><a href="indexGame.html">Game</a></li>
-                                    <li class="plain-link"><a href="#infos">Informatii joc</a></li>
-                                    <li class="plain-link"><a href="#ranking">Clasament Jucatori</a></li>
-                                    <li class="plain-link"><a href="#contact">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p class="copyright"></p>
-                    </div>
-                </footer>
+        </div>  
+        <div id="template_welcome_wrapper">
+            <div id="template_welcome">
+                <div id="welcome_text">
+                    <h1>IMAGINE</h1>
+                    <p>imagine</p>
+                </div>
             </div>
         </div>
-        
-        <!-- ============== SCRIPTS =============== -->
-        <script src="js/jquery-1.12.4.min.js"></script>
-        <script src="js/jquery-mobile-custom/jquery.mobile.custom.min.js"></script>
-        
+        <div id="template_more_wrapper">
+            <div id="template_more">
+
+                <div class="more_box">
+                    <h2>Ceva1</h2>
+                    <p>vjdfnvkdnfk</p>
+                    <div class="cleaner"></div>
+                </div>
+
+                <div class="more_box">
+                    <h2>Ceva2</h2>
+                    <p>vnjdfkvjkfndvnlkl</p>
+                    <div class="cleaner"></div>
+                </div>
+
+                <div class="more_box more_box_last">
+                    <h2>Ceva3</h2>
+                    <p>vnfdnvndfvfdomdflvoeriufhei</p>
+                    <div class="cleaner"></div>
+                </div>
+            </div>
+        </div>
+        <div id="template_content_wrapper_outer">
+            <div id="template_content_wrapper_inner">
+          <div id="template_content_wrapper">
+                <div id="template_content">
+                    <h2 class="our_game">Bine ai venit!</h2>
+                    <p>Ceva text aici</p>
+                    <div class="cleaner_h20"></div>
+              </div>
+                <div id="template_sidebar"><span class="sidebar_top"></span><span class="sidebar_bottom"></span>
+                    <h2 class="current_top">Top 3 jucatori:</h2>
+                    <div class="top">
+                        <p> Jucator 1 </p>
+                        <p> Jucator 2 </p>
+                        <p> Jucator 3 </p>
+                    </div>
+                 </div>
+                <div class="cleaner"></div>
+            </div>
+            </div>
+        </div>
+        <div id="template_footer_wrapper">
+            <div id="template_footer">
+            | Copyright © 2018 <a href="#"> RPG GAME    </a> | <a href="#" class="current">  ACASA   </a> | <a href="#contact">  CONTACT </a> |
+        </div>
+        </div>
     </body>
 </html>
