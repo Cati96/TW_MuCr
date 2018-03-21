@@ -4,6 +4,11 @@ $('#loginbtn').click(function () {
 		 $('#login').show();
 		$('#login').removeClass("fade");
 });
+$('#registerbtn').click(function () {
+   
+         $('#register').show();
+        $('#register').removeClass("fade");
+});
 $(".construieste").click(function(){
 	if($(this).attr("data-dismiss") == "modal"){
 		$(this).parent().parent().parent().parent().parent().hide();
