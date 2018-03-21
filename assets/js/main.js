@@ -1,11 +1,34 @@
+/*HELPERS*/
+$(".construieste").click(function(){
+	if($(this).attr("data-dismiss") == "modal"){
+		$(this).parent().parent().parent().parent().parent().hide();
+		$("modal").addClass("fade");
+	}
+});
+$(".btn").click(function(){
+	if($(this).html() == "Close"){
+		$(this).parent().parent().parent().parent().hide();
+		$("modal").addClass("fade");
+	}
+});
+
+$(".close").click(function(){
+	if($(this).attr("data-dismiss") == "modal"){
+		$(this).parent().parent().parent().parent().hide();
+		$("modal").addClass("fade");
+	}
+});
+
+
 var curentId = "";
 
+
 /*
-Functia buildBuilding ia trei parametri: id, cladire, nivel
+Functia construieste ia trei parametri: id, cladire, nivel
 Se apeleaza de fiecare data cand utilizatorul - care joaca rolul de primar - doreste sa construiasca o casa; daca utilizatorul are suficiente resurse se apeleaza functiile removeClass si addClass, functii specifice jQuery, altfel se afiseaza un mesaj corespunzator.
 Atunci cand face match pe un anumit id, functia removeClass elibereaza zona de contruire si in acelasi loc se construieste cladirea aleasa cu ajutorul functiei addClass si se marcheaza terenul ca "ocupat"
 */
-function buildBuilding(id, cladire, nivel) {
+function construieste(id, cladire, nivel) {
     if (checkC(nivel, getBid(cladire))) {
         $("#" + id).removeClass("free");
         $("#" + id).removeClass("construieste");
@@ -47,100 +70,93 @@ function getBid(cladire) {
 
 /*
 Functie specifica jQuery. La producerea evenimentului click pe un anumit spatiu, se verifica daca spatiul este ocupat sau nu. 
-<<<<<<< HEAD
 Daca nu este ocupat atunci pentru id-ul "builder" si clasa "modal" se afiseaza imediat pop-up-ul/modalul cu o lista de constructii disponibile si se preia id-ul curent al casutei/spatiului cand te duci cu mouse-ul.
-=======
 Daca nu este ocupat atunci pentru id-ul "builder" si clasa "modal" se afiseaza imediat pop-up-ul cu o lista de constructii disponibile.
->>>>>>> 97637efaa9797c39edf880f55257bb13f7c2a3f5
 Altfel, daca este ocupat se face un updgrade la cladire in functie de tipul acesteia: casa, bloc, apa ( statie de epurare), rafinarie, fabrica, it, termopane.
 */
 $('.free').click(function () {
     if (!$(this).hasClass("ocupat")) {
-        $('#builder').modal('show');
+		 $('#builder').show();
+		$('#builder').removeClass("fade");
+       
         curentId = $(this).attr("id");
     }
     else {
-        $('#upgrade').modal('show');
+        
+		 $('#upgrade').show();
+		$('#upgrade').removeClass("fade");
         curentId = $(this).attr("id");
-        var html_cont = "";
         if ($(this).hasClass("casa")) {
+            var html_cont = "";
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="5">Nivel 5</button></div>';
-            
             $(".upgradeBody").html(html_cont);
-            
             $(".nivel").click(function () {
-                buildBuilding(curentId, "casa", $(this).attr("nivel"));
+                construieste(curentId, "casa", $(this).attr("nivel"));
             });
         }
-        else if ($(this).hasClass("bloc")) {
+        if ($(this).hasClass("bloc")) {
+            var html_cont = "";
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="5">Nivel 5</button></div>';
-            
             $(".upgradeBody").html(html_cont);
-            
             $(".nivel").click(function () {
-                buildBuilding(curentId, "bloc", $(this).attr("nivel"));
+                construieste(curentId, "bloc", $(this).attr("nivel"));
             });
         }
-        else if ($(this).hasClass("apa")) {
+        if ($(this).hasClass("apa")) {
+            var html_cont = "";
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
-            
             $(".upgradeBody").html(html_cont);
-            
             $(".nivel").click(function () {
-                buildBuilding(curentId, "apa", $(this).attr("nivel"));
+                construieste(curentId, "apa", $(this).attr("nivel"));
             });
         }
-        else if ($(this).hasClass("fabrica")) {
+        if ($(this).hasClass("fabrica")) {
+            var html_cont = "";
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
-            
             $(".upgradeBody").html(html_cont);
-            
             $(".nivel").click(function () {
-                buildBuilding(curentId, "fabrica", $(this).attr("nivel"));
+                construieste(curentId, "fabrica", $(this).attr("nivel"));
             });
         }
-        else if ($(this).hasClass("it")) {
+        if ($(this).hasClass("it")) {
+            var html_cont = "";
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
-            
             $(".upgradeBody").html();
-            
             $(".nivel").click(function () {
-                buildBuilding(curentId, "it", $(this).attr("nivel"));
+                construieste(curentId, "it", $(this).attr("nivel"));
             });
         }
-        else if ($(this).hasClass("termopane")) {
+        if ($(this).hasClass("termopane")) {
+            var html_cont = "";
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
-            
             $(".upgradeBody").html(html_cont);
-            
             $(".nivel").click(function () {
-                buildBuilding(curentId, "termopane", $(this).attr("nivel"));
+                construieste(curentId, "termopane", $(this).attr("nivel"));
             });
         }
-        else if ($(this).hasClass("rafinarie")) {
+        if ($(this).hasClass("rafinarie")) {
+            var html_cont = "";
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
             html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
-            
             $(".upgradeBody").html(html_cont);
-            
             $(".nivel").click(function () {
-                buildBuilding(curentId, "rafinarie", $(this).attr("nivel"));
+                construieste(curentId, "rafinarie", $(this).attr("nivel"));
             });
         }
     }
@@ -150,7 +166,8 @@ $('.free').click(function () {
 Functie specifica jQuery. La producerea evenimentului click pe spatiul primariei, se verifica la ce nivel se vrea construita primaria si daca sunt suficienti bani. Daca sunt suficienti bani atunci se construieste primaria la nivelul dorit, altfel se afiseaza mesajul corespunzator.
 */
 $('.primarie').click(function () {
-    $('#primarie').modal('show');
+    $('#primarie').show();
+	$('#primarie').removeClass("fade");
     $(".nivPrimarie").click(function () {
         if ($(this).attr("nivel") == 1 && bani >= 10) {
             $('.primarie').removeClass("primarie1");
@@ -183,9 +200,5 @@ $('.primarie').click(function () {
 Functie specifica jQuer. Functia/eventul click reprezinta activatorul de buton
 */
 $(".construieste").click(function () {
-    buildBuilding(curentId, $(this).attr("cladire"), "1");
+    construieste(curentId, $(this).attr("cladire"), "1");
 });
-
-function tryingToEscapeFromConflicts(){
-    console.log("Trying to escape from conflicts.");
-}
