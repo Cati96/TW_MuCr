@@ -1,7 +1,7 @@
 /*****************************************************/
 
 /*container*/
- .container {
+.container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -10,30 +10,30 @@
 }
 
 @media (min-width: 576px) {
-   .container {
+  .container {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-   .container {
+  .container {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-   .container {
+  .container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-   .container {
+  .container {
     max-width: 1140px;
   }
 }
 
- .container {
+.container {
     min-width: 992px !important;
   }
 
@@ -41,7 +41,7 @@
 /******************************************************************************/
 
 /*row*/
- .row {
+.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +54,7 @@
 /******************************************************************************/
 
 /*col-sm*/
- .col-sm-2, .col-sm-3, .col-sm-6, .col-sm-8, .col-sm-12 {
+.col-sm-2, .col-sm-3, .col-sm-6, .col-sm-8, .col-sm-12 {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -62,35 +62,35 @@
   padding-left: 15px;
 }
 
- .col-sm-2 {
+.col-sm-2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
   }
 
- .col-sm-3 {
+.col-sm-3 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
   }
 
- .col-sm-6 {
+.col-sm-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 
- .col-sm-8 {
+.col-sm-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
   }
 
-  .col-sm-12 {
+ .col-sm-12 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -100,7 +100,7 @@
 /******************************************************************************/
 
 /*btn*/
- .btn {
+.btn {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -118,24 +118,24 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
- .btn:hover, .btn:focus {
+.btn:hover, .btn:focus {
   text-decoration: none;
 }
 
- .btn:focus, .btn.focus {
+.btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
- .btn.disabled, .btn:disabled {
+.btn.disabled, .btn:disabled {
   opacity: 0.65;
 }
 
- .btn:not(:disabled):not(.disabled) {
+.btn:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
 
- .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
+.btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
   background-image: none;
 }
 
@@ -143,36 +143,36 @@
 /*******************************************************************************************/
 
 /*btn-primary*/
- .btn-primary {
+.btn-primary {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
 }
 
- .btn-primary:hover {
+.btn-primary:hover {
   color: #fff;
   background-color: #0069d9;
   border-color: #0062cc;
 }
 
- .btn-primary:focus, .btn-primary.focus {
+.btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
- .btn-primary.disabled, .btn-primary:disabled {
+.btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
 }
 
- .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #0062cc;
   border-color: #005cbf;
 }
 
- .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
@@ -180,46 +180,46 @@
 /**********************************************************************************************/
 
 /*button*/
- button {
+button {
   border-radius: 0;
 }
 
- button:focus {
+button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
- button {
+button {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
- button {
+button {
   overflow: visible;
 }
 
- button {
+button {
   text-transform: none;
 }
 
- button,
+button,
 html [type="button"]{
   -webkit-appearance: button;
 }
 
- button::-moz-focus-inner,
+button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
- input[type="button"].btn-block {
+input[type="button"].btn-block {
   width: 100%;
 }
 
- button.close {
+button.close {
   padding: 0;
   background-color: transparent;
   border: 0;
@@ -229,20 +229,20 @@ html [type="button"]{
 /*************************************************************************************/
 
 /*modal & dialog & fade*/
- .fade {
+.fade {
   opacity: 0;
   transition: opacity 0.15s linear;
 }
 
- .fade.show {
+.fade.show {
   opacity: 1;
 }
 
- .modal-open {
+.modal-open {
   overflow: hidden;
 }
 
- .modal {
+.modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -254,19 +254,19 @@ html [type="button"]{
   outline: 0;
 }
 
- .modal-open .modal {
+.modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
 }
 
- .modal-dialog {
+.modal-dialog {
   position: relative;
   width: auto;
   margin: 0.5rem;
   pointer-events: none;
 }
 
- .modal.fade .modal-dialog {
+.modal.fade .modal-dialog {
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
@@ -274,12 +274,12 @@ html [type="button"]{
   transform: translate(0, -25%);
 }
 
- .modal.show .modal-dialog {
+.modal.show .modal-dialog {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
- .modal-content {
+.modal-content {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,7 +297,7 @@ html [type="button"]{
   outline: 0;
 }
 
- .modal-header {
+.modal-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,17 +313,17 @@ html [type="button"]{
   border-top-right-radius: 0.3rem;
 }
 
- .modal-header .close {
+.modal-header .close {
   padding: 1rem;
   margin: -1rem -1rem -1rem auto;
 }
 
- .modal-title {
+.modal-title {
   margin-bottom: 0;
   line-height: 1.5;
 }
 
- .modal-body {
+.modal-body {
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -331,7 +331,7 @@ html [type="button"]{
   padding: 1rem;
 }
 
- .modal-footer {
+.modal-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,16 +345,16 @@ html [type="button"]{
   border-top: 1px solid #e9ecef;
 }
 
- .modal-footer > :not(:first-child) {
+.modal-footer > :not(:first-child) {
   margin-left: .25rem;
 }
 
- .modal-footer > :not(:last-child) {
+.modal-footer > :not(:last-child) {
   margin-right: .25rem;
 }
 
 @media (min-width: 576px) {
-   .modal-dialog {
+  .modal-dialog {
     max-width: 500px;
     margin: 1.75rem auto;
   }
@@ -363,7 +363,7 @@ html [type="button"]{
 /**************************************************************************************************/
 
 /*close*/
- .alert-dismissible .close {
+.alert-dismissible .close {
   position: absolute;
   top: 0;
   right: 0;
@@ -371,7 +371,7 @@ html [type="button"]{
   color: inherit;
 }
 
- .close {
+.close {
   float: right;
   font-size: 1.5rem;
   font-weight: 700;
@@ -381,18 +381,12 @@ html [type="button"]{
   opacity: .5;
 }
 
- .close:hover, .close:focus {
+.close:hover, .close:focus {
   color: #000;
   text-decoration: none;
   opacity: .75;
 }
 
- .close:not(:disabled):not(.disabled) {
+.close:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-
-/***************************************************************************************************/
-
-body {
-    min-width: 992px !important;
-  }
