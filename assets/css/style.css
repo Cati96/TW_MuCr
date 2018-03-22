@@ -6847,7 +6847,7 @@ h2, h3 {
   font-size: 130%;
   padding: 8px 16px; }
 
-.features-item .item-name-caption, .gallery-item .item-name-caption, .gallery-item .item-price-caption {
+.theGame-item .item-name-caption, .informations-item .item-name-caption, .informations-item .item-price-caption {
   border-radius: 5px;
   color: white;
   font-size: 80%;
@@ -7305,42 +7305,42 @@ header {
 /*------------------------------------------------------------------
 
 3. Layout / #layout
-    3.2. Features / #features
+    3.2. theGame / #theGame
     
 -------------------------------------------------------------------*/
-.features {
+.theGame {
   padding-top: 20px; }
 
-.features-img {
+.theGame-img {
   width: 100%;
   border: 1px solid;
   opacity: 0.5;
   transition: all 0.5s;
   box-shadow: 0px 0px 25px 0px #000000; }
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) {
-    .features-img {
+    .theGame-img {
       opacity: 1; } }
   @media (max-width: 768px) {
-    .features-img {
+    .theGame-img {
       opacity: 1; } }
 
-.features-item .item-name-caption {
+.theGame-item .item-name-caption {
   background-color: #000000;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   top: 0;
   border-radius: 0px;
   left: 0;
   display: none; }
-.features-item:hover .features-img {
+.theGame-item:hover .theGame-img {
   opacity: 1;
   border: 1px solid #9d9280;
   box-shadow: 0px 0px 25px 0px #37271b; }
-.features-item:hover h3 {
+.theGame-item:hover h3 {
   text-shadow: 0px 0px 4px #383838; }
-.features-item:hover .features-p {
+.theGame-item:hover .theGame-p {
   color: #9d9280; }
 
-.features-p {
+.theGame-p {
   font-family: Helvetica, Arial, sans-serif;
   color: #71675b;
   font-size: 0.85em;
@@ -7349,10 +7349,10 @@ header {
   font-weight: 400;
   line-height: 1.4rem; }
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (min-device-height: 1366px) and (max-device-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) {
-    .features-p {
+    .theGame-p {
       font-size: 0.8em; } }
   @media (max-width: 320px) {
-    .features-p {
+    .theGame-p {
       font-size: 0.9rem; } }
 
 h3 {
@@ -7361,40 +7361,40 @@ h3 {
 /*------------------------------------------------------------------
 
 3. Layout / #layout
-    3.3. Gallery / #gallery
+    3.3. informations / #informations
 
 -------------------------------------------------------------------*/
-.gallery {
+.informations {
   color: #ffffff;
   padding: 3% 0 0 0;
   box-shadow: inset 0 10px 50px #000000;
   overflow: hidden; }
   @media (min-width: 1200px) {
-    .gallery {
+    .informations {
       padding: 1.5% 0; } }
-  .gallery .section-description {
+  .informations .section-description {
     margin: 1rem auto 3rem auto; }
-  .gallery h2 {
+  .informations h2 {
     margin-bottom: 40px; }
-  .gallery #dragonic-carousel {
+  .informations #dragonic-carousel {
     border: 0;
     width: 100%; }
     @media (min-width: 1200px) {
-      .gallery #dragonic-carousel {
+      .informations #dragonic-carousel {
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.65);
         margin: 0 auto 4rem auto;
         width: 1200px; } }
-    .gallery #dragonic-carousel img {
+    .informations #dragonic-carousel img {
       width: 100%; }
-  .gallery .carousel-caption {
+  .informations .carousel-caption {
     padding: 10px;
     font-size: 80%;
     margin-bottom: 30px; }
     @media (max-width: 480px) {
-      .gallery .carousel-caption {
+      .informations .carousel-caption {
         display: none; } }
     @media (min-width: 768px) {
-      .gallery .carousel-caption {
+      .informations .carousel-caption {
         left: 10%;
         right: 10%;
         padding: 20px;
@@ -7546,20 +7546,20 @@ h3 {
 /*------------------------------------------------------------------
 
 3. Layout / #layout
-    3.4. Store / #store
+    3.4. ranking / #ranking
 
 -------------------------------------------------------------------*/
-.store {
+.ranking {
   padding-top: 1.5%;
   margin-bottom: 1.25rem; }
   @media (min-width: 768px) {
-    .store {
+    .ranking {
       margin-bottom: 0.25rem; } }
-  .store .items-container {
+  .ranking .items-container {
     padding: 0 10%;
     text-align: center; }
     @media (min-width: 768px) {
-      .store .items-container {
+      .ranking .items-container {
         padding: 0 0 0 8.33333333%;
         text-align: left; } }
 
@@ -7602,7 +7602,7 @@ h3 {
   background: url(../img/blog-separator-2.png) 50% 100% no-repeat;
   position: relative; }
 
-.gallery-item {
+.informations-item {
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.33);
   transition: background-color 0.2s, box-shadow 0.2s;
   background-color: #3f2f29;
@@ -7611,38 +7611,38 @@ h3 {
   margin-top: 25px;
   margin-bottom: 25px; }
   @media (min-width: 768px) {
-    .gallery-item {
+    .informations-item {
       margin-top: 8.33333333%;
       margin-bottom: 0; } }
-  .gallery-item:hover {
+  .informations-item:hover {
     background-color: #752b1a;
     box-shadow: 0 0 60px rgba(97, 51, 40, 0.9); }
-    .gallery-item:hover .panel-item__text {
+    .informations-item:hover .panel-item__text {
       border-right: 1px solid #752b1a;
       border-left: 1px solid #752b1a; }
-    .gallery-item:hover .panel-item__title {
+    .informations-item:hover .panel-item__title {
       color: #f3e6d0; }
-    .gallery-item:hover .panel-item__summary {
+    .informations-item:hover .panel-item__summary {
       color: #be9d7c; }
-  .gallery-item img {
+  .informations-item img {
     border-radius: inherit;
     width: 100%;
     height: auto; }
-  .gallery-item .item-name-caption {
+  .informations-item .item-name-caption {
     background-color: #000000;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
     top: 0;
     border-radius: 0px;
     left: 0;
     display: none; }
-  .gallery-item .item-price-caption {
+  .informations-item .item-price-caption {
     background-color: #000000;
     box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.25);
     top: 0;
     right: 0;
     border-radius: 0px;
     display: none; }
-  .gallery-item .icon-caption {
+  .informations-item .icon-caption {
     border: 3px solid transparent;
     border-radius: 50%;
     display: block;
@@ -7660,14 +7660,14 @@ h3 {
     font-size: 150%;
     padding: 5px 15px; }
     @media (min-width: 768px) {
-      .gallery-item .icon-caption {
+      .informations-item .icon-caption {
         font-size: 200%;
         padding: 5px 20px; } }
     @media (min-width: 992px) {
-      .gallery-item .icon-caption {
+      .informations-item .icon-caption {
         font-size: 300%;
         padding: 15px 35px; } }
-  .gallery-item:after {
+  .informations-item:after {
     content: " ";
     background-color: transparent;
     width: 100%;
