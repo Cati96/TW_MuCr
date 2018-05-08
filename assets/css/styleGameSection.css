@@ -1,178 +1,209 @@
 .body {
     background-image: url("../img/resurse/grass-tile-3.png");
+    padding-bottom: 30px;
+}
+
+.body2 {
+    margin: 0;
+    background-image: url("../img/resurse/grass-tile-3.png");
+    padding-bottom: 30px;
+    height: 100px;
 }
 
 .space {
     width: 100%;
-    padding-bottom: 75%;
-    margin: 10px;
+    margin:5px;
 }
 
 .free {
     border: 1px yellow solid;
     border-radius: 15px;
+}
+
+.cladire {
     
 }
-.cladire{
-    
-}
-.primarie1{
+
+.primarie1 {
     background-image: url(../img/primarie/1.png);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-repeat: no-repeat;   
 }
-.primarie2{
+
+.primarie2 {
     background-image: url(../img/primarie/2.png);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-repeat: no-repeat;   
 }
-.primarie3{
+
+.primarie3 {
     background-image: url(../img/primarie/3.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
 }
-.apa1{
+
+.apa1 {
     background-image: url(../img/apa/1.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;   
 }
-.apa2{
+
+.apa2 {
     background-image: url(../img/apa/2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.bloc1{
+
+.bloc1 {
     background-image: url(../img/bloc/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.bloc2{
+
+.bloc2 {
     background-image: url(../img/bloc/2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.bloc3{
+
+.bloc3 {
     background-image: url(../img/bloc/3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.bloc4{
+
+.bloc4 {
     background-image: url(../img/bloc/4.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.bloc5{
+
+.bloc5 {
     background-image: url(../img/bloc/5.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.casa1{
+
+.casa1 {
     background-image: url(../img/casa/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.casa2{
+
+.casa2 {
     background-image: url(../img/casa/2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.casa3{
+
+.casa3 {
     background-image: url(../img/casa/3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.casa4{
+
+.casa4 {
     background-image: url(../img/casa/4.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.casa5{
+
+.casa5 {
     background-image: url(../img/casa/5.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.fabrica1{
+
+.fabrica1 {
     background-image: url(../img/factory/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.fabrica2{
+
+.fabrica2 {
     background-image: url(../img/factory/2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.fabrica3{
+
+.fabrica3 {
     background-image: url(../img/factory/3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.fabrica4{
+
+.fabrica4 {
     background-image: url(../img/factory/4.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.it1{
+
+.it1 {
     background-image: url(../img/firma1/it1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.it2{
+
+.it2 {
     background-image: url(../img/firma1/it2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.it3{
+
+.it3 {
     background-image: url(../img/firma1/it3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.termopane1{
+
+.termopane1 {
     background-image: url(../img/firma2/termopane1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.termopane2{
+
+.termopane2 {
     background-image: url(../img/firma2/termopane2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.termopane3{
+
+.termopane3 {
     background-image: url(../img/firma2/termopane3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.rafinarie1{
+
+.rafinarie1 {
     background-image: url(../img/rafinarie/rafinarie1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.rafinarie2{
+
+.rafinarie2 {
     background-image: url(../img/rafinarie/rafinarie2.png);
     background-position: center;
     background-repeat: no-repeat;
