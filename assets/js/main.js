@@ -105,11 +105,11 @@ $('.free').click(function () {
         curentId = $(this).attr("id");
         if ($(this).hasClass("casa")) {
             var html_cont = "";
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="5">Nivel 5</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="5">Nivel 5</button></div>';
             $(".upgradeBody").html(html_cont);
             $(".nivel").click(function () {
                 construieste(curentId, "casa", $(this).attr("nivel"));
@@ -117,11 +117,11 @@ $('.free').click(function () {
         }
         if ($(this).hasClass("bloc")) {
             var html_cont = "";
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="5">Nivel 5</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="5">Nivel 5</button></div>';
             $(".upgradeBody").html(html_cont);
             $(".nivel").click(function () {
                 construieste(curentId, "bloc", $(this).attr("nivel"));
@@ -129,8 +129,8 @@ $('.free').click(function () {
         }
         if ($(this).hasClass("apa")) {
             var html_cont = "";
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
             $(".upgradeBody").html(html_cont);
             $(".nivel").click(function () {
                 construieste(curentId, "apa", $(this).attr("nivel"));
@@ -138,10 +138,10 @@ $('.free').click(function () {
         }
         if ($(this).hasClass("fabrica")) {
             var html_cont = "";
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="4">Nivel 4</button></div>';
             $(".upgradeBody").html(html_cont);
             $(".nivel").click(function () {
                 construieste(curentId, "fabrica", $(this).attr("nivel"));
@@ -149,9 +149,9 @@ $('.free').click(function () {
         }
         if ($(this).hasClass("it")) {
             var html_cont = "";
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
             $(".upgradeBody").html();
             $(".nivel").click(function () {
                 construieste(curentId, "it", $(this).attr("nivel"));
@@ -159,9 +159,9 @@ $('.free').click(function () {
         }
         if ($(this).hasClass("termopane")) {
             var html_cont = "";
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="3">Nivel 3</button></div>';
             $(".upgradeBody").html(html_cont);
             $(".nivel").click(function () {
                 construieste(curentId, "termopane", $(this).attr("nivel"));
@@ -169,8 +169,8 @@ $('.free').click(function () {
         }
         if ($(this).hasClass("rafinarie")) {
             var html_cont = "";
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
-            html_cont += '<div class="row"><p>Construieste nivel 1</p><button type="button" class="btn btn-default nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="1">Nivel 1</button></div>';
+            html_cont += '<div class="row"><p  id ="upgradeText">Construieste nivel 1</p><button type="button" class="btn btn-upgrade nivel" data-dismiss="modal" nivel="2">Nivel 2</button></div>';
             $(".upgradeBody").html(html_cont);
             $(".nivel").click(function () {
                 construieste(curentId, "rafinarie", $(this).attr("nivel"));

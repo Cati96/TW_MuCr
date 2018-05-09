@@ -379,6 +379,19 @@ h1 {
 	bottom: 155px;
 }
 
+.Divider5 {
+	height: 55px;
+	width: 100%;
+	padding: 0px;
+	background: url(../img/divider-sprite.png) 50%;
+	background-position: 0% 0%;
+	z-index: 300;
+	margin: 0px -30px;
+	position: absolute;
+	display: block;
+	bottom: 130px;
+}
+
 .top5 {
     color: white;
     width: 500px;
@@ -587,10 +600,21 @@ h3 {
     border-radius: 15px;
 	padding: 5px;
 	border: 1px solid gold;
-    height: 40px;
+    height: 35px;
     width: 100px;
-    float: right;
-    
+    float: right;    
+}
+
+.btn-upgrade {
+    background-image: linear-gradient(to right, orange, yellow, orange);
+    float: inherit;
+    border-radius: 5px;
+    border: 1px solid gold;
+    height: 25px;
+    width: 80%;
+    font-family: inherit;
+	font-size: 20px;
+	font-weight: inherit;
 }
 
 .btn-primary {
@@ -811,4 +835,9 @@ select{
     color: forestgreen;
     font-weight: bold;
     font-size: 17px;
+}
+
+#upgradeText, #initText {
+    color: blueviolet;
+    font-size: 18px;
 }
