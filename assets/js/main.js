@@ -4,6 +4,12 @@ $('#loginbtn').click(function () {
 		 $('#login').show();
 		$('#login').removeClass("fade");
 });
+$('#showProfil').click(function () {
+   
+		 $('#profil').show();
+		$('#profil').removeClass("fade");
+});
+
 $('#registerbtn').click(function () {
    
          $('#register').show();
@@ -15,6 +21,7 @@ $(".construieste").click(function(){
 		$("modal").addClass("fade");
 	}
 });
+
 $(".btn").click(function(){
 	if($(this).html() == "Close"){
 		$(this).parent().parent().parent().parent().hide();
@@ -180,24 +187,24 @@ $('.primarie').click(function () {
 	$('#primarie').removeClass("fade");
     $(".nivPrimarie").click(function () {
         if ($(this).attr("nivel") == 1 && bani >= 10) {
-            $('.primarie').removeClass("primarie1");
-            $('.primarie').removeClass("primarie2");
-            $('.primarie').removeClass("primarie3");
-            $('.primarie').addClass("primarie" + $(this).attr("nivel"));
+            $('.primarie').parent().parent().removeClass("primarie1");
+            $('.primarie').parent().parent().removeClass("primarie2");
+            $('.primarie').parent().parent().removeClass("primarie3");
+            $('.primarie').parent().parent().addClass("primarie" + $(this).attr("nivel"));
             bani -= 10;
         }
         else if ($(this).attr("nivel") == 2 && bani >= 5000) {
-            $('.primarie').removeClass("primarie1");
-            $('.primarie').removeClass("primarie2");
-            $('.primarie').removeClass("primarie3");
-            $('.primarie').addClass("primarie" + $(this).attr("nivel"));
+            $('.primarie').parent().parent().removeClass("primarie1");
+            $('.primarie').parent().parent().parent().parent().removeClass("primarie2");
+            $('.primarie').parent().parent().removeClass("primarie3");
+            $('.primarie').parent().parent().addClass("primarie" + $(this).attr("nivel"));
             bani -= 5000;
         }
         else if ($(this).attr("nivel") == 3 && bani >= 10000) {
-            $('.primarie').removeClass("primarie1");
-            $('.primarie').removeClass("primarie2");
-            $('.primarie').removeClass("primarie3");
-            $('.primarie').addClass("primarie" + $(this).attr("nivel"));
+            $('.primarie').parent().parent().removeClass("primarie1");
+            $('.primarie').parent().parent().removeClass("primarie2");
+            $('.primarie').parent().parent().removeClass("primarie3");
+            $('.primarie').parent().parent().addClass("primarie" + $(this).attr("nivel"));
             bani -= 10000;
         }
         else {
@@ -207,8 +214,14 @@ $('.primarie').click(function () {
 });
 
 /*
-Functie specifica jQuer. Functia/eventul click reprezinta activatorul de buton
+Functie specifica jQuery. Functia/eventul click reprezinta activatorul de buton
 */
 $(".construieste").click(function () {
     construieste(curentId, $(this).attr("cladire"), "1");
+});
+
+
+$(".close").click(function(){
+	$(this).parent().parent().parent().parent().css("display","none");
+	
 });
