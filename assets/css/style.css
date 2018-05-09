@@ -295,7 +295,7 @@ h1 {
 	border-color: #080808;
 	padding-right: 0;
 	padding-left: 0;
-	height: 120;
+	height: 80px;
 	float: left;
 	width: 100%;
 	display: block;
@@ -339,7 +339,7 @@ h1 {
 	margin: 0px 0px;
 	position: absolute;
 	display: block;
-	top: 82px;
+	top: 52px;
 }
 
 .Divider2 {
@@ -351,7 +351,7 @@ h1 {
 	margin: 0px 0px;
 	position: absolute;
 	display: block;
-	top: 1330px;
+	top: 890px;
 }
 
 .Divider3 {
@@ -380,8 +380,9 @@ h1 {
 }
 
 .top5 {
-	color: white;
-	height: 40px!important;
+    color: white;
+    width: 500px;
+    height: 20px;
 }
 
 .caseta4 {
@@ -391,11 +392,13 @@ h1 {
 
 h3 {
 	color: aliceblue;
+    text-align: center;
 }
 
 .footer {
-	width: 100%;
-	padding-top: 20px;
+    width: 100%;
+    padding-top: 10px;
+    height: 50px;
 }
 
 .container2 {
@@ -484,34 +487,93 @@ h3 {
 }
 
 .modal {
-	width: 900px;
-	height: 100%;
-	position: absolute;
-	left: 50%;
-	margin-left: -450px;
-	background-color: white;
-	z-index: 2;
-	top: 10px;
-	padding: 20px;
-	border: 1px solid gold;
-	box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
-	padding: 10px;
-	background: white;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	padding: 1rem 1.33rem 1.33rem;
-	display: none;
-	overflow: scroll;
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -450px;
+    background-color: white;
+    z-index: 2;
+    top: 90px;
+    padding: 20px;
+    border: 1px solid gold;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 1.33rem 1.33rem;
+    display: none;
+    overflow: scroll;
 }
 
-.modal .modal-header {
+.modal-login {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 65%;
+    margin-left: -450px;
+    background-color: white;
+    z-index: 2;
+    top: 90px;
+    padding: 20px;
+    border: 1px solid gold;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 1.33rem 1.33rem;
+    display: none;
+    background-color: antiquewhite;
+}
+
+.modal-profil {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    left: 44%;
+    margin-left: -450px;
+    background-color: white;
+    z-index: 2;
+    top: 90px;
+    padding: 20px;
+    border: 1px solid gold;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 1.33rem 1.33rem;
+    display: none;
+    overflow: scroll;
+    background-color: antiquewhite;
+}
+    
+.modal, .modal-profil .modal-header {
 	text-align: center;
 }
 
 .close {
-	float: right;
+	float:right;
+    margin-top:-30px;
+    margin-right:-20px;
+    cursor:pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #605F61;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;  
 }
 
 .construieste {
@@ -522,6 +584,13 @@ h3 {
 
 .btn-default {
 	background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    border-radius: 15px;
+	padding: 5px;
+	border: 1px solid gold;
+    height: 40px;
+    width: 100px;
+    float: right;
+    
 }
 
 .btn-primary {
@@ -529,6 +598,7 @@ h3 {
 	border-radius: 15px;
 	padding: 5px;
 	border: 1px solid gold;
+    height: 40px;
 }
 
 .modal .modal-footer {
@@ -565,11 +635,15 @@ div {
 }
 
 table {
-	margin-top: 20px;
-	width: 1000px;
-	height: 1000px;
-	margin: 0 auto;
-	margin-bottom: 30px;
+    margin-top: 10px;
+    width: 900px;
+    height: 700px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-spacing: 20px;
+    border-collapse: separate;
+    border-color: grey;
+    display: table;
 }
 
 .formular,
@@ -661,16 +735,14 @@ table {
 	
 }
 select{
-		border: none;
+        border: 2px solid #73AD21;
 		outline: none;
-		background: transparent;
-		-webkit-appearance: none;
-		-moz-appearance: none;
+		background: aliceblue;
 		appearance: none;
 		border-radius: 0;
 		margin: 0;
 		display: block;
-		width: 100%;
+		width: 25%;
 		padding: 12px 55px 15px 15px;
 		font-size: 14px;
 		color: #714BB9;
@@ -718,4 +790,25 @@ select{
   background-image: -o-linear-gradient(top, #2eb837, #3498db);
   background-image: linear-gradient(to bottom, #2eb837, #3498db);
   text-decoration: none;
+}
+
+#labelProfil {
+    color: brown;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#imgPozec {
+    height: 200px;
+    width: 300px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#labelLogin{
+    color: forestgreen;
+    font-weight: bold;
+    font-size: 17px;
 }

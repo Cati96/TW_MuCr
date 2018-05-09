@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>WAR OF MAIRES</title>
 	<link href="assets/css/style.css" rel="stylesheet">
-	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" /> </head>
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" /> 
+</head>
 
 <body>
 	<div class="row">
@@ -19,15 +20,16 @@
 					<div style="width: 50%;margin: 0;float: left">
 						<a class="" href="#home"><img style="width:300px; height: 100x; padding-left: 50px; padding-bottom: 35px" src="assets/img/warOfMairesLogo.png" /></a>
 					</div>
-					<div style="width:50%;display:inline-block;float: left;" id="main-nav">
-						<ul class="nav ">
-							<li><a href="#" id="showProfil">Profil</a></li>
-							<li><a href="#"id="loginbtn">Login</a></li>
-							<li><a href="register.html" >Register</a></li>
-							<li><a href="#theGame">Game</a></li>
+					<div style="width:50%;display:inline;" id="main-nav">
+						<ul class="nav">
+                            <li><a href="register.html" >Register</a></li>
+							<li><a href="#" id="loginbtn">Login</a></li>			
+                            <li><a href="#contact">Contact</a></li>
 							<li><a href="#informations">Informatii joc</a></li>
 							<li><a href="#ranking">Clasament Jucatori</a></li>
-							<li><a href="#contact">Contact</a></li>
+                            <li><a href="#theGame">Game</a></li>
+                            <li><a href="#" id="showProfil">Profil</a></li>
+                            <li><a href="#logout">Log out</a></li>
 						</ul>
 					</div>
 				</div>
@@ -42,19 +44,19 @@
 				<div class="row">
 					<div class="caseta3">
 						<button type="button" class="btn btn-primary" style="width: 100%;">
-							<p>BANI : </p><span id="bani"></span></button>
+							<p>BANI : <span id="bani"></span></p></button>
 					</div>
 					<div class="caseta3">
 						<button type="button" class="btn btn-primary" style="width: 100%;">
-							<p>POPULATIE : </p><span id="populatie"></span></button>
+							<p>POPULATIE : <span id="populatie"></span></p></button>
 					</div>
 					<div class="caseta3">
 						<button type="button" class="btn btn-primary" style="width: 100%;">
-							<p>CURENT : </p><span id="curent"></span></button>
+							<p>CURENT : <span id="curent"></span></p></button>
 					</div>
 					<div class="caseta3">
 						<button type="button" class="btn btn-primary" style="width: 100%;">
-							<p>UTILITATI : </p><span id="apa"></span></button>
+							<p>UTILITATI : <span id="apa"></span></p></button>
 					</div>
 				</div>
 			</div>
@@ -116,7 +118,7 @@
 	<div id="builder" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-header"> Modal Constructor case
+				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Buildings</h4> </div>
 				<div class="modal-body">
@@ -156,7 +158,7 @@
 		</div>
 	</div>
 	<div id="primarie" class="modal fade" role="dialog">
-		<div class="modal-dialog"> Modal nivel primarie
+		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -182,7 +184,7 @@
 		</div>
 	</div>
 	<div id="upgrade" class="modal fade" role="dialog">
-		<div class="modal-dialog"> Modal nivel primarie
+		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -199,7 +201,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="login" class="modal fade" role="dialog">
+	<div id="login" class="modal-login fade" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -207,20 +209,23 @@
 					<h4 class="modal-title">Login</h4> </div>
 				<div class="modal-body">
 					<div class="input-form">
-						<label>Username</label>
-						<input type="text" placeholder="Username"> </div>
+						<label id="labelLogin">Username:</label>
+						<input class="Input-text" type="text" placeholder="Username"> </div>
 					<div class="input-form">
-						<label>Password</label>
-						<input type="password" placeholder="Password"> </div>
+                        <br>
+						<label id="labelLogin">Password:</label>
+						<input class="Input-text" type="password" placeholder="Password"> </div>
+                    <br>
 					<button type="button" class="btn btn-default" data-dismiss="modal">Login</button>
 				</div>
 				<div class="modal-footer">
+                    <br><br><br>
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="profil" class="modal fade" role="dialog">
+	<div id="profil" class="modal-profil fade" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -228,52 +233,16 @@
 					<h4 class="modal-title">Profil Utilizator</h4> </div>
 				<div class="modal-body">
 					<div class="input-form">
-						<label>Nume Utilizator : </label> <span id="numej"></span><br>
-						<label>Nume Caracter : </label> <span id="numep"></span><br>
-						<label>Poveste Caracter: </label> <span id="povp"></span><br>
-						<label>Imagini Caracter : </label> <span id="pozec"><br>
-						
-						</span>
-						
-						
+						<label id="labelProfil">Nume utilizator: </label> <span id="numej"></span><br>
+						<label id="labelProfil">Nume caracter: </label> <span id="numep"></span><br>
+                        <br>
+						<label id="labelProfil">Poveste caracter: </label> <span id="povp"></span><br>
+                        <br>
+						<label id="labelProfil">Imagini caracter: </label> <br> <span id="pozec"><br></span>						
 					</div>
 				</div>
 				<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-			</div>
-		</div>
-	</div>
-	<div id="register" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Register</h4> </div>
-				<div class="modal-body ">
-					<div class="row">
-						<div class="input-form">
-							<label>Username</label>
-							<input type="text" placeholder="Username"> </div>
-						<div class="input-form">
-							<label>Password</label>
-							<input type="password" placeholder="Password"> </div>
-						<div class="input-form">
-							<label>Password</label>
-							<input type="password" placeholder="Repeat Password"> </div>
-						<div class="input-form">
-							<label>Email</label>
-							<input type="text" placeholder="Email"> </div>
-						<div class="input-form">
-							<label>Nume Complet</label>
-							<input type="text" placeholder="Nume complet">
-							<br>
-							<br> </div>
-						<button type="button" class="btn btn-default" data-dismiss="modal">Register</button>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -294,7 +263,6 @@
 		<section class="ranking" id="ranking">
 			<div class="container">
 				<h3><b>Top 5 jucatori:</b></h3>
-				<br>
 				<table class="top5" style="color: aliceblue">
 					<tr>
 						<td>
@@ -375,5 +343,4 @@
 	<script src="assets/js/calculator.js"></script>
 	<script src="assets/js/profil.js"></script>
 </body>
-
 </html>
