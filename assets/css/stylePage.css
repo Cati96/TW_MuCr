@@ -381,3 +381,115 @@ table{
 	height: 210px;
 	float: right;	
 }
+
+.Input {
+	position relative;
+}
+
+.Input-text {
+	display block;
+	margin 0;
+	padding 10px 10px;
+	color darkslategrey;
+	width 100%;
+	font-family inherit;
+	font-size 18px;
+	font-weight inherit;
+	line-height 1;
+	border none;
+	border-radius 6rem;
+	transition box-shadow 300ms;
+}
+
+.Input-textfocus {
+	outline none;
+	box-shadow 0.2rem 0.8rem 1.6rem green;
+}
+
+.Input-textplaceholder-shown + .Input-label {
+	visibility hidden;
+	z-index -1;
+}
+
+.Input-textnot(placeholder-shown) + .Input-label,
+.Input-textfocusnot(placeholder-shown) + .Input-label {
+	visibility visible;
+	z-index 1;
+	opacity 1;
+	transform translate3d(0, var(--labelTransformedPosY), 0) scale(var(--labelScaleFactor));
+	transition transform var(--inputTransitionDuration), visibility 0ms, z-index 0ms;
+}
+
+.custom-select {
+	position relative;
+	display block;
+	width 320px!important;
+	width 180px;
+	border-radius 20px;
+	
+	
+	border 1px solid #3C1C78;
+	background-color aliceblue;
+	z-index 10;
+	
+}
+
+select{
+		border none;
+		outline none;
+		background transparent;
+		-webkit-appearance none;
+		-moz-appearance none;
+		appearance none;
+		border-radius 0;
+		margin 0;
+		display block;
+		width 100%;
+		padding 12px 55px 15px 15px;
+		font-size 14px;
+		color #714BB9;
+	}
+	&after {
+		position absolute;
+		right 0;
+		top 0;
+		width 50px;
+		height 100%;
+		line-height 38px;
+		content '2228';
+		text-align center;
+		color #714BB9;
+		font-size 24px;
+		border-left 1px solid #3C1C78;
+		z-index -1;
+	}
+	
+.buton_register{
+  background #34d976;
+  background-image -webkit-linear-gradient(top, #34d976, #1f631f);
+  background-image -moz-linear-gradient(top, #34d976, #1f631f);
+  background-image -ms-linear-gradient(top, #34d976, #1f631f);
+  background-image -o-linear-gradient(top, #34d976, #1f631f);
+  background-image linear-gradient(to bottom, #34d976, #1f631f);
+  -webkit-border-radius 20;
+  -moz-border-radius 20;
+  border-radius 20px;
+  -webkit-box-shadow 2px 4px 15px #666666;
+  -moz-box-shadow 2px 4px 15px #666666;
+  box-shadow 2px 4px 15px #666666;
+  font-family Arial;
+  color #edf0ee;
+  font-size 20px;
+  padding 10px 20px 10px 20px;
+  text-decoration none;
+}
+
+.buton_registerhover {
+  background #2eb837;
+  background-image -webkit-linear-gradient(top, #2eb837, #3498db);
+  background-image -moz-linear-gradient(top, #2eb837, #3498db);
+  background-image -ms-linear-gradient(top, #2eb837, #3498db);
+  background-image -o-linear-gradient(top, #2eb837, #3498db);
+  background-image linear-gradient(to bottom, #2eb837, #3498db);
+  text-decoration none;
+}
