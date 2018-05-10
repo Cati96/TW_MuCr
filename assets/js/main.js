@@ -183,25 +183,28 @@ $('.primarie').click(function () {
 	$('#primarie').removeClass("fade");
 	$(".nivPrimarie").click(function () {
 		if ($(this).attr("nivel") == 1 && bani >= 10) {
-			$('.primarie').parent().parent().removeClass("primarie1");
-			$('.primarie').parent().parent().removeClass("primarie2");
-			$('.primarie').parent().parent().removeClass("primarie3");
-			$('.primarie').parent().parent().addClass("primarie" + $(this).attr("nivel"));
+			$('.primarie').parent().parent().parent().removeClass("primarie1");
+			$('.primarie').parent().parent().parent().removeClass("primarie2");
+			$('.primarie').parent().parent().parent().removeClass("primarie3");
+			$('.primarie').parent().parent().parent().addClass("primarie" + $(this).attr("nivel"));
 			bani -= 10;
+			$(this).parent().parent().parent().parent().parent().hide();
 		}
 		else if ($(this).attr("nivel") == 2 && bani >= 5000) {
-			$('.primarie').parent().parent().removeClass("primarie1");
-			$('.primarie').parent().parent().parent().parent().removeClass("primarie2");
-			$('.primarie').parent().parent().removeClass("primarie3");
-			$('.primarie').parent().parent().addClass("primarie" + $(this).attr("nivel"));
+			$('.primarie').parent().parent().parent().removeClass("primarie1");
+			$('.primarie').parent().parent().parent().parent().parent().removeClass("primarie2");
+			$('.primarie').parent().parent().parent().removeClass("primarie3");
+			$('.primarie').parent().parent().parent().addClass("primarie" + $(this).attr("nivel"));
 			bani -= 5000;
+			$(this).parent().parent().parent().parent().parent().hide();
 		}
 		else if ($(this).attr("nivel") == 3 && bani >= 10000) {
-			$('.primarie').parent().parent().removeClass("primarie1");
-			$('.primarie').parent().parent().removeClass("primarie2");
-			$('.primarie').parent().parent().removeClass("primarie3");
-			$('.primarie').parent().parent().addClass("primarie" + $(this).attr("nivel"));
+			$('.primarie').parent().parent().parent().removeClass("primarie1");
+			$('.primarie').parent().parent().parent().removeClass("primarie2");
+			$('.primarie').parent().parent().parent().removeClass("primarie3");
+			$('.primarie').parent().parent().parent().addClass("primarie" + $(this).attr("nivel"));
 			bani -= 10000;
+			$(this).parent().parent().parent().parent().parent().hide();
 		}
 		else {
 			alert("Nu ai destui bani !");
