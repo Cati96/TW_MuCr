@@ -7,4 +7,5 @@ public class Variables {
 	public static final String DBNAME = "retail_database";
 	public static final String USERNAME = "root";
 	public static final String PASSWORD = "admin";
+	public static final int SERVERPORT= 8111;
 }
