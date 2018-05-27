@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.sun.net.httpserver.HttpServer;
-import com.uaic.info.tw.backend.Globals.Variables;
 
 public class WebServer {
 	public static HttpServer server;

@@ -7,14 +7,30 @@ import java.sql.SQLException;
 import com.uaic.info.tw.backend.Globals.Variables;
 
 public class DatabaseConnection {
-	private Connection connection;
+	private static volatile DatabaseConnection instance = null;
+	private Connection connection = null;
+	private static Object mutex = new Object();
 	
-	public DatabaseConnection() {
-		connection = null;
+	private DatabaseConnection() throws SQLException {
+		connection = createDatabaseConnection();
 	}
+	
+	public static DatabaseConnection getInstance() throws SQLException {
+		DatabaseConnection result = instance;
+		if (result == null) {
+			synchronized (mutex) {
+				result = instance;
+				if (result == null)
+					instance = result = new DatabaseConnection();
+			}
+		}
+		return result;
+	}
+	
+	
 
 	public Connection createDatabaseConnection() throws SQLException {		
-		if ( connection == null ) {
+		if ( instance == null ) {
 			try {
 				Class.forName(Variables.MYSQL_CONNECTOR);
 			} catch (ClassNotFoundException e) {

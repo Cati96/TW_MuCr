@@ -1,10 +1,7 @@
 package com.uaic.info.tw.backend;
 
-import java.net.InetSocketAddress;
-
-import com.sun.net.httpserver.HttpServer;
-
-import com.uaic.info.tw.backend.Controller.Servlet.Servlet;
+import com.uaic.info.tw.backend.Controller.DatabaseConnection;
+import com.uaic.info.tw.backend.Controller.WebServer;
 
 public class App 
 {
