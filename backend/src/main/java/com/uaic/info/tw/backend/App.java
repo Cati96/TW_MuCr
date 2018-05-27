@@ -7,10 +7,5 @@ public class App
 {
 	public static void main(String[] args) throws Exception {
     	System.out.println("Hello world!");
-    	
-    	DatabaseConnection dbConn = DatabaseConnection.getInstance();
-    	
-    	WebServer server = new WebServer();
-    	
     }
 }
