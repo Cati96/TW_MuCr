@@ -17,7 +17,7 @@ function populateAnime(id) {
 			var temp_name = jucator.info.image;
 			var temp_html = '';
 			for (var i = 0; i < temp_name.length; i++) {
-				temp_html += '<img id = "imgPozec" src="' + temp_name[i] + '" class="imagine_profil"/>';
+				temp_html += '<img src="' + temp_name[i] + '" class="imagine_profil"/>';
 			}
 			$("#pozec").html(temp_html);
 		});
