@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import com.uaic.info.tw.backend.Globals.Variables;
+
 public class InitDatabase {
 	
 	private String createUserTable = "CREATE TABLE users ("
@@ -33,20 +35,24 @@ public class InitDatabase {
 	
 	private Connection connection;
 	
-	public InitDatabase(Connection connection) {
-		this.connection = connection;
-		createTable(createUserTable);
-		createTable(createRankTable);
-		createTable(createSaveDataTable);
-		
+	public InitDatabase() {
+		this.connection = Variables.DB_CONN;
 	}
+	
 	private void createTable(String query) {
 		PreparedStatement pst;
 		try {
 			pst = this.connection.prepareStatement(query);
 			pst.executeUpdate();
+			System.out.println("Table created.");
 		} catch (SQLException e) {
 			System.out.println("Table already exists.");
 		}
+	}
+	
+	public void databaseCreator() {
+		createTable(createUserTable);
+		createTable(createRankTable);
+		createTable(createSaveDataTable);
 	}
 }

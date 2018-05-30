@@ -9,10 +9,12 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		System.out.println("Starting database server...");
 		DatabaseConnection dbConn = new DatabaseConnection();
+		Variables.DB_CONN = dbConn.getConnection();
 		System.out.println("Connection to database set!");
 
 		System.out.println("Creating tables if not exists...");
-		InitDatabase dbInitializer = new InitDatabase(dbConn.getConnection());
+		InitDatabase dbInitializer = new InitDatabase();
+		dbInitializer.databaseCreator();
 
 		System.out.println("Starting server...");
 		WebServer server = new WebServer();
