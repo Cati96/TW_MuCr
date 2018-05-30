@@ -10,16 +10,15 @@ import org.apache.derby.jdbc.EmbeddedDriver;
 import com.uaic.info.tw.backend.Globals.Variables;
 
 public class DatabaseConnection {
-	private Connection connection;
 
 	private Driver derbyEmbeddedDriver = new EmbeddedDriver();
 	private Driver d = DriverManager.getDrivers().nextElement();
+	
+	private Connection connection = null;
 
 	public DatabaseConnection() throws SQLException {
 		DriverManager.deregisterDriver(d);
 		DriverManager.registerDriver(derbyEmbeddedDriver);
-		
-		connection = null;
 	}
 
 	public Connection getConnection() {

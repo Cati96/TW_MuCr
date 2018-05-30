@@ -42,7 +42,7 @@ public class InitDatabase {
 	private void createTable(String query) {
 		PreparedStatement pst;
 		try {
-			pst = this.connection.prepareStatement(query);
+			pst = connection.prepareStatement(query);
 			pst.executeUpdate();
 			System.out.println("Table created.");
 		} catch (SQLException e) {
