@@ -1,4 +1,4 @@
-package com.uaic.info.tw.backend.Controller;
+package com.uaic.info.tw.backend.Controller.Database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
