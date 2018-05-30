@@ -3,6 +3,7 @@ package com.uaic.info.tw.backend.Controller;
 import java.net.InetSocketAddress;
 
 import com.sun.net.httpserver.HttpServer;
+import com.uaic.info.tw.backend.Controller.Servlet.LoginServlet;
 import com.uaic.info.tw.backend.Controller.Servlet.RegisterServlet;
 import com.uaic.info.tw.backend.Controller.Servlet.TestingServlet;
 import com.uaic.info.tw.backend.Globals.Variables;
@@ -14,6 +15,7 @@ public class WebServer {
 		server = HttpServer.create(new InetSocketAddress(Variables.SERVERPORT), 0);
 		server.createContext("/test", new TestingServlet());//creates a servlet on path test with class
 		server.createContext("/register", new RegisterServlet());
+		server.createContext("/login", new LoginServlet());
 		server.setExecutor(null); // creates a default executor
 	}
 	
