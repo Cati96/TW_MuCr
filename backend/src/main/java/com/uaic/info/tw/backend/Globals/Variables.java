@@ -1,11 +1,12 @@
 package com.uaic.info.tw.backend.Globals;
 
+import java.sql.Connection;
+
 public class Variables {
-	public static final String MYSQL_CONNECTOR = "com.mysql.cj.jdbc.Driver";
-	public static final String SERVER = "localhost";
-	public static final String PORT = "3306";
-	public static final String DBNAME = "retail_database";
-	public static final String USERNAME = "root";
-	public static final String PASSWORD = "admin";
+	public static final String DERBY_CONNECTOR = "org.apache.derby.jdbc.ClientDriver";
+	public static final String DB_PATH = "jdbc:derby:loaclDb;create=true";
+
 	public static final int SERVERPORT= 8111;
+	
+	public static Connection DB_CONN = null;
 }
