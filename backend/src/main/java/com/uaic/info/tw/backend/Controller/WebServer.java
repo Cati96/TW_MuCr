@@ -16,6 +16,7 @@ public class WebServer {
 		server.createContext("/test", new TestingServlet());//creates a servlet on path test with class
 		server.createContext("/register", new RegisterServlet());
 		server.createContext("/login", new LoginServlet());
+		server.createContext("/rank", new RankServlet());
 		server.setExecutor(null); // creates a default executor
 	}
 	

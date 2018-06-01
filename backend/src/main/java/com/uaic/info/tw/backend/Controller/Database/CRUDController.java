@@ -85,4 +85,20 @@ public class CRUDController {
 		
 		return response;
 	}
+	
+	public String getOrderedRank() throws SQLException {
+		
+		String response = "";
+		
+		String query = "SELECT username, points FROM RANK ORDER BY points DESC;";
+		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
+		
+		ResultSet rs = pstm.executeQuery();
+		
+		while( rs.next()) {
+			response += rs.getString("username") + "\n" + rs.getString("points") + "\n\n";
+		}
+		
+		return response;
+	}
 }
