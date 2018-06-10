@@ -1,107 +1,78 @@
 package com.uaic.info.tw.backend.Model;
 
 public class User {
-	private int user_id;
+	private int userId;
 	private String username;
 	private String password;
-	private String fname;
-	private String lname;
-	private String country;
+	private String name;
 	private String email;
-	private String phone;
-	private long points;
-	private String saved_data;	
+	private String avatar;
 	
-	public User(int user_id, String username, String password, String fname, String lname, String country, String email, String phone, String saved_data) {
-		this.user_id = user_id;
+	public User(int userId, String username, String password, String name, String email, String avatar) {
+		super();
+		this.userId = userId;
 		this.username = username;
 		this.password = password;
-		this.fname = fname;
-		this.lname = lname;
-		this.country = country;
+		this.name = name;
 		this.email = email;
-		this.phone = phone;
-		this.points = 0;
-		this.saved_data = saved_data;
+		this.avatar = avatar;
 	}
 	
-	public int getUser_id() {
-		return user_id;
+	public User(String username, String password, String name, String email, String avatar) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.name = name;
+		this.email = email;
+		this.avatar = avatar;
 	}
-	
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+
+	public int getUserId() {
+		return userId;
 	}
-	
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
 	public String getUsername() {
 		return username;
 	}
-	
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}
-	
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	public String getFname() {
-		return fname;
+
+	public String getName() {
+		return name;
 	}
-	
-	public void setFname(String fname) {
-		this.fname = fname;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public String getLname() {
-		return lname;
-	}
-	
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
-	
-	public String getCountry() {
-		return country;
-	}
-	
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	
+
 	public String getEmail() {
 		return email;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	public String getPhone() {
-		return phone;
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
 	}
 	
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	
-	public long getPoints() {
-		return points;
-	}
-	
-	public void setPoints(long points) {
-		this.points = points;
-	}
-	
-	public String getSaved_data() {
-		return saved_data;
-	}
-	
-	public void setSaved_data(String saved_data) {
-		this.saved_data = saved_data;
-	}
 }

@@ -13,6 +13,8 @@ public class DatabaseConnection {
 
 	private Driver derbyEmbeddedDriver = new EmbeddedDriver();
 	private Driver d = DriverManager.getDrivers().nextElement();
+	
+	private Connection connection = null;
 
 	public DatabaseConnection() throws SQLException {
 		DriverManager.deregisterDriver(d);
@@ -21,16 +23,16 @@ public class DatabaseConnection {
 
 	public Connection getConnection() {
 		try {
-			Variables.DB_CONN = DriverManager.getConnection(Variables.DB_PATH);
-			Variables.DB_CONN.setAutoCommit(true);
-			if (Variables.DB_CONN != null) {
+			connection = DriverManager.getConnection(Variables.DB_PATH);
+			connection.setAutoCommit(true);
+			if (connection != null) {
 				System.out.println("Connection to database created corectly.");
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
-			System.out.println("Something went wrong :) ");
+			System.out.println("Something went wrong when creating connection to database.");
 		}
-		return Variables.DB_CONN;
+		return connection;
 	}
 
 }

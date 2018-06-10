@@ -1,13 +1,10 @@
 package com.uaic.info.tw.backend.Controller;
 
-import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
-import java.net.URLDecoder;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 import com.sun.net.httpserver.HttpServer;
+import com.uaic.info.tw.backend.Controller.Servlet.LoginServlet;
+import com.uaic.info.tw.backend.Controller.Servlet.RegisterServlet;
 import com.uaic.info.tw.backend.Controller.Servlet.TestingServlet;
 import com.uaic.info.tw.backend.Globals.Variables;
 
@@ -16,8 +13,13 @@ public class WebServer {
 
 	public WebServer() throws Exception {
 		server = HttpServer.create(new InetSocketAddress(Variables.SERVERPORT), 0);
-		server.createContext("/test", new TestingServlet());//creates a servlet on path test with class 
-		server.createContext("/save", new SaveDataServlet());//creates a servlet on path save with class
+
+		server.createContext("/test", new TestingServlet());//creates a servlet on path test with class
+		server.createContext("/register", new RegisterServlet());
+		server.createContext("/login", new LoginServlet());
+		server.createContext("/rank", new RankServlet());
+    server.createContext("/save", new SaveDataServlet());//creates a servlet on path save with class
+    
 		server.setExecutor(null); // creates a default executor
 	}
 	
