@@ -12,16 +12,16 @@ import com.uaic.info.tw.backend.Model.User;
 public class CRUDController {
 	
 	public String selectUserByUsername(String username) throws SQLException {
-		String query = "SELECT * FROM USERS WHERE username = ?";
+		String query =  "SELECT * FROM USERS WHERE username = ?";
 		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
 		pstm.setString(1, username.trim());
 
 		ResultSet rs = pstm.executeQuery();
-		if (rs.next()) {
-			return rs.getString("username");
-		} else {
-			return null;
-		}
+		if(rs.next()) {
+            return "exists";
+        } else {
+            return null;
+        }
 	}
 
 	public void createUser(User newUser) throws SQLException {
@@ -68,7 +68,7 @@ public class CRUDController {
 		
 		String response = null;
 		if(rs.next()) {
-            int userId =  rs.getInt("id");
+            int userId =  rs.getInt("user_id");
             
             String query1 = "SELECT * FROM SAVE_DATA WHERE user_id = ?";
             pstm = Variables.DB_CONN.prepareStatement(query1);
