@@ -17,6 +17,7 @@ public class WebServer {
 		server.createContext("/register", new RegisterServlet());
 		server.createContext("/login", new LoginServlet());
 		server.createContext("/rank", new RankServlet());
+		server.createContext("/save", new SaveDataServlet());
 		server.setExecutor(null); // creates a default executor
 	}
 	
