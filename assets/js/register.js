@@ -13,6 +13,7 @@ function PopuleazaAnimeuriProfil() {
 		var htmla = '';
 		htmla += '<label>Select Avatar</label><br><select class="select_avatar">';
 		console.log(db.length);
+		
 		for (var i = 0; i < db.length; i++) {
 			htmla += '<option value="' + db[i].mal_id + '">' + db[i].name + '</option>';
 		}
@@ -37,5 +38,22 @@ function PopuleazaAnimeuriProfil() {
 		})
 	});
 }
+
 //executam metoda mai sus creata
-PopuleazaAnimeuriProfil();
+//PopuleazaAnimeuriProfil();
+$("#register").click(function(){
+	$.get("http://localhost:8111/register",{
+		"username":$("#username").val(),
+		"password":$("#password").val(),
+		"email":$("#email").val(),
+		"name":$("#fname").val(),
+		"avatar":"Unavailable"
+	},function(data){
+		if(data == "valid"){
+			alert("User registered");
+			window.location.href="index.html";
+		}else{
+			alert("User Not Created ! Server returned "+data);
+		}
+	})
+});
