@@ -10,7 +10,7 @@ import com.uaic.info.tw.backend.Model.SaveData;
 import com.uaic.info.tw.backend.Model.User;
 
 public class CRUDController {
-	
+  
 	public String selectUserByUsername(String username) throws SQLException {
 		String query = "SELECT * FROM USERS WHERE username = ?";
 		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
@@ -100,5 +100,14 @@ public class CRUDController {
 		}
 		
 		return response;
+	}
+  
+  public void saveUserGameData(int userId, String data) throws SQLException {
+		String query = "UPDATE SAVE_DATA SET save_data = ? where user_id = ?";
+		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
+		pstm.setString(1, data);
+		pstm.setInt(2, userId);
+		
+		pstm.executeUpdate();
 	}
 }
