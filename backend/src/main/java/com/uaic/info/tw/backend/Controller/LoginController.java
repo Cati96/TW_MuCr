@@ -25,10 +25,10 @@ public class LoginController {
 		String password = receivedParams.get("password");
 		
 		String response1 = crudController.selectUserByUsernameAndPassword(username, password);
-		if( response1 != null ) {
-			response = response1;
-		}else {
+		if( response1 == "invalid" ) {
 			response = "Wrong username  or password...";
+		}else {
+			response = response1;
 		}
 		
 		return response;

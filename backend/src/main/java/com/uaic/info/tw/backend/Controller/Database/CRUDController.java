@@ -59,32 +59,31 @@ public class CRUDController {
 	}
 	
 	public String selectUserByUsernameAndPassword(String username, String password) throws SQLException {
-		String query =  "SELECT * FROM USERS WHERE username = ? AND  password = ? ";
+		String query =  "SELECT * FROM users WHERE username = ? AND  password = ? ";
 		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
-		pstm.setString(1, username.trim());
-		pstm.setString(2, password.trim());
-
+		pstm.setString(1, username);
+		pstm.setString(2, password);
 		ResultSet rs = pstm.executeQuery();
-		
-		String response = null;
-		if(rs.next()) {
-            int userId =  rs.getInt("user_id");
-            
-            String query1 = "SELECT * FROM SAVE_DATA WHERE user_id = ?";
+	
+		while(rs.next()) {
+            int userId =  rs.getInt("id");
+            System.out.println("UserId-"+userId);
+            String query1 = "SELECT * FROM save_data WHERE user_id = ?";
             pstm = Variables.DB_CONN.prepareStatement(query1);
     		pstm.setInt(1, userId);
     		
     		ResultSet rs1 = pstm.executeQuery();
     		
-    		if( rs1.next()) {
-    			response = rs1.getString("save_data");
-    		}else {
-    			response = userId  + "";
+    		while( rs1.next()) {
+    			return rs1.getString("save_data");
     		}
+    			return userId  + "";
+    		
         }
+		return "invalid";
 		
-		return response;
 	}
+	
 	
 	public String getOrderedRank() throws SQLException {
 		
