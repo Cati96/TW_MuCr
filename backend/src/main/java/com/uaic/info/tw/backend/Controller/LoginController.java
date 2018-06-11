@@ -21,17 +21,19 @@ public class LoginController {
 	public String verifyUserExistance() throws SQLException {
 		String response = "";
 		
-		String username = receivedParams.get("username");
-		String password = receivedParams.get("password");
-		
-		String response1 = crudController.selectUserByUsernameAndPassword(username, password);
-		if( response1 == "invalid" ) {
-			response = "Wrong username  or password...";
+		if ( receivedParams.get("profil") != null) {
+			return crudController.getUserById((Integer.parseInt(receivedParams.get("profil"))));
 		}else {
-			response = response1;
-		}
-		
+			String username = receivedParams.get("username");
+			String password = receivedParams.get("password");
+			
+			String response1 = crudController.selectUserByUsernameAndPassword(username, password);
+			if( response1 == "invalid" ) {
+				response = "Wrong username  or password...";
+			}else {
+				response = response1;
+			}
+		}	
 		return response;
 	}
 }
-

@@ -109,4 +109,20 @@ public class CRUDController {
 		
 		pstm.executeUpdate();
 	}
+	
+	public String getUserById(int userId) throws SQLException {
+		String query = "SELECT username, name, avatar FROM USERS WHERE id = ? ";
+		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
+		pstm.setInt(1, userId);
+		
+		ResultSet rs = pstm.executeQuery();
+		
+		String response = "";
+		
+		while( rs.next()) {
+			response += rs.getString("username") + "<>|<>" + rs.getString("name") + "<>|<>" + rs.getString("avatar");
+		}
+		
+		return response;
+	}
 }
