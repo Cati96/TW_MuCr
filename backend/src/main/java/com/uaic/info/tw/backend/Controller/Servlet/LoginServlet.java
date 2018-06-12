@@ -19,6 +19,7 @@ public class LoginServlet implements HttpHandler{
 		String response = "";
 		try {
 			response = loginController.verifyUserExistance();
+			System.out.println("Response in login servlet: " + response);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -92,14 +92,16 @@ function saveData() {
 	localStorage.setItem("savedata",btoa(JSON.stringify(saved)));
 	$.get("http://localhost:8111/save",{
 		"userId":$.cookie("userId"),
-		"saveData":btoa(JSON.stringify(saved))
-	},function(){console.log("Saved");});
+		"saveData":btoa(JSON.stringify(saved)),
+        "points":( bani * curent * apa * populatie * angajati)
+	},function(){console.log("Saved"); console.log(saved);});
 }
 function classCreator(arr){
 	var s1="";
 	for(var i=0;i<arr.length;i++){
 		s1+=arr[i]+" ";
 	}
+    console.log("s1 = " + s1);
 	return s1;
 }
 function getPrimarieClass(){

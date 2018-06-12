@@ -1,10 +1,7 @@
 package com.uaic.info.tw.backend.Controller;
 
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
 
-import com.uaic.info.tw.backend.Model.User;
 import com.uaic.info.tw.backend.Controller.Database.CRUDController;
 
 public class RankController {

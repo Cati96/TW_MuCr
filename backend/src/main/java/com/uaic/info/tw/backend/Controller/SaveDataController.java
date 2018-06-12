@@ -22,7 +22,8 @@ Map<String, String> receivedParams = new HashMap<String, String>();
 	public void saveUserStatusGame() throws SQLException {		
 		int userId = Integer.parseInt(receivedParams.get("userId"));
 		String toSave = receivedParams.get("saveData");
+		String points = receivedParams.get("points").trim();
 		
-		crudController.saveUserGameData(userId, toSave);
+		crudController.saveUserGameDataAndPoints(userId, toSave, points);
 	}
 }
