@@ -24,6 +24,8 @@ Map<String, String> receivedParams = new HashMap<String, String>();
 		String toSave = receivedParams.get("saveData");
 		String points = receivedParams.get("points").trim();
 		
+		System.out.println("Points: " + points );
+		
 		crudController.saveUserGameDataAndPoints(userId, toSave, points);
 	}
 }

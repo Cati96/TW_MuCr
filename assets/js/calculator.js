@@ -90,10 +90,12 @@ function saveData() {
 		saved.buildings.push($(this).attr('class').split(/\s+/));
 	});
 	localStorage.setItem("savedata",btoa(JSON.stringify(saved)));
+    var currentPoints = parseInt(0.35 * saved.bani + 0.25 * populatie + 0.15 * apa + 0.15 * curent + 0.1 * angajati, 10) ;
+    console.log("currentPoints:" + currentPoints);
 	$.get("http://localhost:8111/save",{
 		"userId":$.cookie("userId"),
 		"saveData":btoa(JSON.stringify(saved)),
-        "points":( bani * curent * apa * populatie * angajati)
+        "points":currentPoints
 	},function(){console.log("Saved"); console.log(saved);});
 }
 function classCreator(arr){

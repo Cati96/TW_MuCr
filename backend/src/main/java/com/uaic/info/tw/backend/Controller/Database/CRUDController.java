@@ -97,7 +97,7 @@ public class CRUDController {
 		ResultSet rs = pstm.executeQuery();
 
 		while (rs.next()) {
-			response += rs.getString("username") + "\n" + rs.getInt("points") + "\n\n";
+			response += rs.getString("username") + "<<<|<<<" + rs.getInt("points") + ">>>|>>>";
 		}
 
 		return response;
@@ -137,8 +137,7 @@ public class CRUDController {
 		String query = "UPDATE save_data SET saved_data = ? where id = ?";
 		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
 		
-		int saveId = getSaveDataIdByUserId(userId);
-		
+		int saveId = getSaveDataIdByUserId(userId);	
 		pstm.setString(1, data);
 		pstm.setInt(2, saveId);
 
@@ -152,6 +151,8 @@ public class CRUDController {
 		pstm1.setInt(2, rankId);
 
 		pstm1.executeUpdate();
+		
+		System.out.println("Rank id: " + rankId + "		Save id: " + saveId);
 	}
 
 	public String getUserById(int userId) throws SQLException {
