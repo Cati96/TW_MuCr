@@ -28,7 +28,6 @@ public class App {
 	        public void run() {
 	        	try {
 					Variables.DB_CONN.close();
-					server.stopServer();
 				} catch (SQLException e) {
 					System.out.println("Connection to database couldn't be closed. The problem is:");
 					System.out.println(e.getMessage());
