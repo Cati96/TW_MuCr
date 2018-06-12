@@ -22,6 +22,7 @@ public class LoginController {
 		String response = "";
 		
 		if ( receivedParams.get("profil") != null) {
+			System.out.println("Profil: " + receivedParams.get("profil"));
 			return crudController.getUserById((Integer.parseInt(receivedParams.get("profil"))));
 		}else {
 			String username = receivedParams.get("username");

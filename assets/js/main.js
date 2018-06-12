@@ -218,10 +218,13 @@ $("#login_button_modal").click(function(){
 		"username":$("#login_username").val(),
 		"password":$("#login_password").val()
 	},function(data){
-		console.log(data);
-		if(data.length>3 && data != "invalid"){
+		console.log("Received: " + data);
+		if(data.length>11 && data != "invalid"){
 			$.cookie("userId",JSON.parse(atob(data)).id);
 			localStorage.setItem("savedata",data);
+            console.log(data);
+            console.log(atob(data));
+            console.log(JSON.parse(atob(data)));
 			window.location.reload();
 		}else if(data=="invalid"){
 			alert("Bad login, try again !");

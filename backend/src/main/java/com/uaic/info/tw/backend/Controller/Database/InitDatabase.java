@@ -29,7 +29,7 @@ public class InitDatabase {
 	private String createSaveDataTable = "CREATE TABLE save_data ("
 			+ "  id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),"
 			+ "  user_id INTEGER NOT NULL,"
-			+ "  save_data VARCHAR(32600) NOT NULL,"
+			+ "  saved_data VARCHAR(32600) NOT NULL,"
 			+ "  PRIMARY KEY (id)"
 			+ ") ";
 	

@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import com.uaic.info.tw.backend.Controller.RegisterController;
 import com.uaic.info.tw.backend.Controller.SaveDataController;
 
 public class SaveDataServlet implements HttpHandler{

@@ -35,10 +35,13 @@ public class RegisterController {
 						receivedParams.get("avatar"));
 			crudController.createUser(newUser);
 			
-			Rank newRank = new Rank(newUser.getUserId(), newUser.getUsername(), 0);
+			int newUserId = crudController.getUserIdByUsername(receivedParams.get("username"));
+			System.out.println("NewUserId: " + newUserId);
+			
+			Rank newRank = new Rank(newUserId, newUser.getUsername(), 0);
 			crudController.createRank(newRank);
 			
-			SaveData newSaveData = new SaveData(newUser.getUserId(), "");
+			SaveData newSaveData = new SaveData(newUserId, "no data yet");
 			crudController.createSaveData(newSaveData);
 			
 			response = "valid";

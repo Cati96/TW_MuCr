@@ -10,6 +10,8 @@ function populateAnime(id) {
 	
 	var jucatorTemp='';
 	
+    console.log("Aici id:" + id);
+    
 	$.get("http://127.0.0.1:8111/login",{
 		profil: id
 	},function(data1){
