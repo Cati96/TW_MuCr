@@ -249,3 +249,24 @@ $(document).ready(function () {
 	});
 	
 });
+
+$(document).ready(function(){
+    $.get("http://localhost:8111/rank", function(data){
+        console.log("Received ranking: " + data);
+        var userAndPoints = data.split(">>>|>>>");
+        
+        var tempHtml = "<div class=\"container\">";
+        tempHtml += "<h3><b>Top jucatori:</b></h3>\n";
+        tempHtml += "<table class=\"topJuc\" style=\"color: aliceblue\">\n";
+        for (i = 0; i < userAndPoints.length - 1; i++){
+            var user = userAndPoints[i].split("<<<|<<<")[0];
+            var points = userAndPoints[i].split("<<<|<<<")[1];
+            
+            tempHtml += "<tr> <td> <p>" + (i + 1) + ". " + user + "</p> </td> <td>" + points + "</td> </tr>\n"; 
+        }
+        tempHtml += "</table>\n</div>";
+        console.log(tempHtml);
+        
+        $(".ranking").html(tempHtml);
+    });
+});
