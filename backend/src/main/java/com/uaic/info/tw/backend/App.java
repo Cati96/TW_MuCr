@@ -1,5 +1,7 @@
 package com.uaic.info.tw.backend;
 
+import java.sql.SQLException;
+
 import com.uaic.info.tw.backend.Controller.WebServer;
 import com.uaic.info.tw.backend.Controller.Database.DatabaseConnection;
 import com.uaic.info.tw.backend.Controller.Database.InitDatabase;
@@ -20,6 +22,18 @@ public class App {
 		WebServer server = new WebServer();
 		server.startServer();
 		System.out.println("Server started at port: " + Variables.SERVERPORT);
-
+		
+		//When turning off the application, close database connection
+		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+	        public void run() {
+	        	try {
+					Variables.DB_CONN.close();
+				} catch (SQLException e) {
+					System.out.println("Connection to database couldn't be closed. The problem is:");
+					System.out.println(e.getMessage());
+				}
+	            System.out.println("Database closed.");
+	        }
+	    }, "Shutdown-thread"));
 	}
 }
