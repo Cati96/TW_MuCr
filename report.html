@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Raport</title>
+    <link rel="stylesheet" href="./assets/css/report.css">
+  </head>
+  <body>
+    <header>
+      <h1>Raport tehnic de implementare</h1>
+    </header>
+    
+    <div role="contentinfo">
+	<ol role="directory">
+		<li>
+			<a href="report.html#abstract">
+				<span>1. </span>
+				Rezumatul raportului
+			</a>
+		</li>
+		<li>
+			<a href="report.html#introduction">
+				<span>2. </span>
+				Introducere
+			</a>
+		</li>
+		<li>
+			<a href="report.html#objective">
+				<span>3. </span>
+				Obiectivul jocului
+			</a>
+		</li>
+		<li>
+			<a href="report.html#implement">
+				<span>4. </span>
+				Metode de implementare
+			</a>
+		</li>
+		<li>
+			<a href="report.html#acks">
+				<span>5. </span>
+				Provocări întâmpinate
+			</a>
+		</li>			
+		<li>
+			<a href="report.html#results">
+				<span>6. </span>
+				Rezultate
+			</a>
+		</li>
+		<li>
+			<a href="report.html#conclusion">
+				<span>7. </span>
+				Concluzii
+			</a>
+		</li>
+		<li>
+			<a href="report.html#next">
+				<span>8. </span>
+				Viitoare îmbunătățiri
+			</a>
+		</li>
+	</ol>
+	</div>
+
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Rezumatul raportului</h2>
+      <p>
+        În cadrul acestui raport am evidențiat etapele dezvoltării proiectului curent, descrierea acestuia, tehnologiile folosite și provocările întâmpinate. În final am prezentat câteva concluzii și viitoare îmbunătățiri ale jocului.
+      </p>
+    </section>
+	
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introducere</h2>
+      <p>
+        War of Maires este un joc Web pe roluri, fiecare rol fiind reprezentat de diferite anime. Jocul implică dezvoltarea graduală a unei comunități, pornind de la un sătuc cu posibilitatea de dezvoltare până la statutul de oraș. Aceasta implică construirea de case, fabrici și instituții, fiecare cu nivele diferite de modernizare. Competiția are loc între diferiți playeri activi (în cazul nostru primari), aceștia fiind clasați în funcție de gradul de dezvoltare al propriului oraș.
+      </p>
+	</section>
+	
+    <section id="objective" >
+      <!-- review? -->
+      <h2>Obiectivul jocului</h2>
+      <p>
+        Fiecare player are ca scop principal adunarea a cât mai multe resurse în vederea construirii celui mai dezvoltat oraș.
+      </p>
+	</section>
+	
+	<section id="implement">
+      <!-- review? -->
+      <h2>Metode de implementare</h2>
+      <p>
+        Pentru partea de backend am folosit:
+      </p>
+	  <ul>
+		  <li>Maven, pentru a ușura adăugarea dependențelor de librării (în acest caz direct în pom.xml, ce implică descărcarea acestora de pe serverul central)</li>
+		  <li>MVC pattern, pentru a oferi proiectului o structură organizată, clară și concisă, ce implică astfel ușurința aducerii de adăugiri sau modificări proiectului</li>
+		  <li>Servlet implementat cu HttpHandler (puteam HttpServer) asincron. HttpHandler este o interfata cu metoda handler ce are ca parametru HttpExchange, parametru pentru a prelua requestul si pentru a oferi raspunsul</li>
+		  <li>pentru baza de date am folosit DerbyDb, baza de date specifica Java. De ce DerbyDb? Este foarte rapida, nu este nevoie de instalarea anterioara a unui server local de baze de date, se configureaza foarte usor o conexiune</li>
+	  </ul>
+	  <p>
+        Pentru partea de frontend am folosit:
+      </p>
+	  <ul>
+		  <li>HTML5, CSS3</li>
+		  <li>JavaScript, pentru că e foarte asemanător cu Java, e foarte simplu de scris cod in javascript și  este ușor de creat legătura cu backend</li>
+		  <li>Jquery, librărie specifică JavaScript</li>
+		  <li>Pentru a face requesturi la server,  facem requesturi de tip AJAX</li>
+		  <li>Kitsu api, pentru preluarea de anime (returnează un tip de data de tip JSON, ce contine inlantuiri de liste. Pentru preluarea anumitor date, am utilizat Postman pentru a face cercetare)</li>
+	  </ul>
+	</section>
+	
+	<section id="acks">
+      <!-- review? -->
+      <h2>Provocări întâmpinate</h2>
+	  <ul>
+		  <li>baza de date: inițial am optat pentru mysql, baza de date ce necesita și un server descărcat local. Ulterior am renuntat la MySql deoarece erau probleme de configurare pe unul dintre laptop-uri
+Soluție: am folosit Derby, baza de date ușor de folosit și care nu necesită server local.</li>
+		  <li>preluarea de anime: am început cu sugestia precizată în proiect (MyAnimeList), dar nu am reușit preluarea cu GET a informațiilor prin URL. Apoi am folosit jkan, api ce a funcționat o perioadă. Recent, serverul a fost mutat fără a muta și baza de date și de aici au apărut complicațiile.
+Am găsit apoi o alternativă, Kitsu, api ușor de folosit, fară necesitate de inregistrare și simplu de parsat date.</li>
+		  <li>integrare back-front: după mai multe încercări am observat că JavaScript e cea mai ușoară cale.</li>
+		  <li>probleme in a intelege cum functioneaza localStorage</li>
+	  </ul>
+	</section>
+	
+	<section id="results">
+      <!-- review? -->
+      <h2>Rezultate</h2>
+      <p>
+        În final, am obținut un joc funcțional, ce îndeplinește caracteristicile propuse inițial.
+	  </p>
+	</section>
+	
+	<section id="conclusion">
+      <!-- review? -->
+      <h2>7. </span>Concluzii</h2>
+      <p>
+        Fiecare player are ca scop principal adunarea a cât mai multe resurse în vederea construirii celui mai dezvoltat oraș.
+      </p>
+	</section>
+	
+	<section id="next">
+      <h2>8. </span>Viitoare îmbunătățiri</h2>
+      <p>
+        Pentru a motiva jucătorii și pentru a le crea o experiență cât mai calitativă avem în vedere următoarele îmbunătățări:
+	  </p>
+	  <ul>
+		<li>interfață grafică cât mai atractivă</li>
+		<li>modul gestionării resurselor jucatorului</li>
+		<li>misiunile propuse jucătorilor</li>
+		<li>optimizări la nivel de cod pentru a se executa mai repede</li>
+	  </ul>
+	</section>
+	
+</body>
+</html>
