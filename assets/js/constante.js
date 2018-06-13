@@ -9,10 +9,15 @@ var consum=0;
 var apa=0;
 var consumApa=0;
 
+var nivelJucator=1;
+var puncteJucator=0;
+var usernameJucator="Jucator nou";
+var imagineProfil = "img";
+
 //cost of upgrading items: cost,populatie,curent,apa
 var buildR=
-{	
-	casa:[200,0,0,0],
+{   
+    casa:[200,0,0,0],
     bloc:[500,0,0.5,0.3],
     apa:[620,0,0.08,0],
     fabrica:[1000,12,1.6,0.5],
