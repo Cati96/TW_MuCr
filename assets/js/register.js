@@ -11,9 +11,10 @@ function PopuleazaAnimeuriProfil() {
 		console.log(db);
 		//incepem crearea html-ului pentru select cu datele din variabila mai sus creata
 		var htmla = '';
-		htmla += '<label>Select Avatar</label><br><select class="select_avatar">';
+		htmla += '<label>Select Avatar</label><br><select class="select_avatar">\n';
+        htmla += '<option value = "select"> ---Select--- </option>\n';
 		for (var i = 0; i < db.length; i++) {
-			htmla += '<option value="' + db[i].id + '">' + db[i].attributes.names.en + '</option>';
+			htmla += '<option value="' + db[i].id + '">' + db[i].attributes.names.en + '</option>\n';
 		}
 		htmla += '</select>';
 		//introducem codul selectului populat cu date in pagina noastra
