@@ -78,95 +78,122 @@ function activateMechanics() {
 	}, 1000);
 }
 
+function setCurentMission() {
+	tempMiss = misiuni_terminate;
+	if(tempMiss != null){
+		for (var i = 0; i < tempMiss.length; i++) {
+		misiuni = misiuni.filter(function (obj) {
+			return obj.id != tempMiss[i];
+		});
+	}
+	misiuni.sort(function (a, b) {
+		return a - b;
+	});
+	}
+	
+	if (misiuni.length > 0) {
+		$("#mbani").html(misiuni[0].bani);
+		$("#mpop").html(misiuni[0].populatie);
+		$("#mcur").html(misiuni[0].curent);
+		$("#mutil").html(misiuni[0].utilitati);
+		$("#mrec").html(misiuni[0].recompensa);
+		$("#mid").html(misiuni[0].id);
+		return misiuni[0];
+	}
+	else {
+		var mnull = new Object();
+		mnull.bani = 0;
+		mnull.poppulatie = 0;
+		mnull.curent = 0;
+		mnull.utilitati = 0;
+		mnull.recompensa = 0;
+		mnull.id = 6;
+		misiuni.push(mnull);
+		return misiuni[0];
+	}
+}
+
+function checkMissionComplete() {
+	var tempm = setCurentMission();
+	var statusm = true;
+	if (!(parseFloat($("#populatie").html().split("/")[0]) >= parseFloat($("#mpop").html()))) {
+		statusm = false;
+	}
+	if (!(parseFloat($("#curent").html().split("/")[0]) >= parseFloat($("#mcur").html()))) {
+		statusm = false;
+	}
+	if (!(parseFloat($("#apa").html().split("/")[0]) >= parseFloat($("#mutil").html()))) {
+		statusm = false;
+	}
+	if (!(parseFloat($("#bani").html()) >= parseFloat($("#mbani").html()))) {
+		statusm = false;
+	}
+	if (statusm) {
+		misiuni_terminate.push(tempm.id);
+		bani += tempm.recompensa;
+		setCurentMission();
+	}
+}
+
 function saveData() {
+	checkMissionComplete();
 	var saved = new Object();
 	saved.id = $.cookie("userId");
-	saved.bani=bani;
+	saved.bani = bani;
 	saved.buildings = [];
-	
-	var plevel=getPrimarieClass();
-	saved.primarie=plevel;
+	saved.missions = misiuni_terminate;
+	var plevel = getPrimarieClass();
+	saved.primarie = plevel;
 	$(".caseta4").each(function () {
 		saved.buildings.push($(this).attr('class').split(/\s+/));
 	});
-	localStorage.setItem("savedata",btoa(JSON.stringify(saved)));
-    var currentPoints = parseInt(0.35 * saved.bani + 0.25 * populatie + 0.15 * apa + 0.15 * curent + 0.1 * angajati, 10) ;
-    console.log("currentPoints:" + currentPoints);
-	$.get("http://localhost:8111/save",{
-		"userId":$.cookie("userId"),
-		"saveData":btoa(JSON.stringify(saved)),
-        "points":currentPoints
-	},function(){console.log("Saved"); console.log(saved);});
+	localStorage.removeItem("savedata");
+	localStorage.setItem("savedata", btoa(JSON.stringify(saved)));
+	misiuni_terminate=JSON.parse(atob(localStorage.getItem("savedata"))).missions;
+	var currentPoints = parseInt(0.35 * saved.bani + 0.25 * populatie + 0.15 * apa + 0.15 * curent + 0.1 * angajati, 10);
+	console.log("currentPoints:" + currentPoints);
+	$.get("http://localhost:8111/save", {
+		"userId": $.cookie("userId")
+		, "saveData": btoa(JSON.stringify(saved))
+		, "points": currentPoints
+	}, function () {
+		console.log("Saved");
+		console.log(saved);
+	});
 }
-function classCreator(arr){
-	var s1="";
-	for(var i=0;i<arr.length;i++){
-		s1+=arr[i]+" ";
+
+function classCreator(arr) {
+	var s1 = "";
+	for (var i = 0; i < arr.length; i++) {
+		s1 += arr[i] + " ";
 	}
-    console.log("s1 = " + s1);
+	console.log("s1 = " + s1);
 	return s1;
 }
-function getPrimarieClass(){
+
+function getPrimarieClass() {
 	return $("#main_activity").attr("class");
-	
 }
 
-function defineNextLevel(){
-     $.get("http://127.0.0.1:8111/missions",{
-        profil1: $.cookie("userId")
-    }, function(data2){
-        nivelJucator = parseInt(data2 / 1000, 10);
-        puncteJucator = data2;
-        console.log("niv jucator in missions " + nivelJucator);
-         
-        if(nivelJucator===1){
-            var target = "Hei " + usernameJucator + ". Observ esti nou venit printe noi.\n Eu te voi ghida de-a lungul jocului si-ti voi spune\ncum sa castigi mai multe puncte.\n";
-            target += "Pentru a ajunge la nivelul 2 construiste o casa de nivel1.\nAsa vei primi un bonus de 100 de bani.";
-            
-            var toHtml ='<img src="' + imagineProfil + '" class="imagine_profil"/>';
-            toHtml += '<img src = "assets/img/text-box-png-11.png" class="balon-tooltip-dialog"/>\n';
-            toHtml += '<p class="text-tooltip-dialog">' + target + '</p>';
-            
-            console.log("Tooltip: " + toHtml);
-        }
-         
-        console.log("Ajunge aici");
-    });
-}
-
-function loadData(code){
-	var ldata=JSON.parse(atob(code));
-	bani=ldata.bani;
-	var idcasuta=0;
+function loadData(code) {
+	var ldata = JSON.parse(atob(code));
+	bani = ldata.bani;
+	var idcasuta = 0;
 	$(".caseta4").each(function () {
-		$(this).attr('class',classCreator(ldata.buildings[idcasuta]));
+		$(this).attr('class', classCreator(ldata.buildings[idcasuta]));
 		idcasuta++;
 	});
 	console.log(ldata.primarie);
-	$(".primarie1").attr("class",ldata.primarie);
-	$(".primarie2").attr("class",ldata.primarie);
-	$(".primarie3").attr("class",ldata.primarie);
-	
+	$(".primarie1").attr("class", ldata.primarie);
+	$(".primarie2").attr("class", ldata.primarie);
+	$(".primarie3").attr("class", ldata.primarie);
 }
 $(document).ready(function () {
 	if ($.cookie("userId")) {
 		activateMechanics();
-		if(localStorage.getItem("savedata")){
+		if (localStorage.getItem("savedata")) {
 			loadData(localStorage.getItem("savedata"));
 		}
-		window.setInterval(saveData,5000);
+		window.setInterval(saveData, 5000);
 	}
-	
-});
-
-
-$(document).ready(function(){
-    setTimeout(function () {
-        defineNextLevel();
-        $(".tooltip").show();    
-    }, 20000)
-    
-    setTimeout(function () {
-        $(".tooltip").hide();
-    }, 50000)
 });

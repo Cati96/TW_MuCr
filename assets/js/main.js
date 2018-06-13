@@ -214,6 +214,8 @@ function activateCommands() {
 }
 
 $("#login_button_modal").click(function(){
+	localStorage.removeItem("savedata");
+	
 	$.get("http://localhost:8111/login",{
 		"username":$("#login_username").val(),
 		"password":$("#login_password").val()
@@ -221,7 +223,10 @@ $("#login_button_modal").click(function(){
 		console.log("Received: " + data);
 		if(data.length>11 && data != "invalid"){
 			$.cookie("userId",JSON.parse(atob(data)).id);
+			
+			
 			localStorage.setItem("savedata",data);
+			misiuni_terminate=JSON.parse(atob(localStorage.getItem("savedata"))).missions;
             console.log(data);
             console.log(atob(data));
             console.log(JSON.parse(atob(data)));
@@ -256,7 +261,7 @@ $(document).ready(function(){
         var userAndPoints = data.split(">>>|>>>");
         
         var tempHtml = "<div class=\"container\">";
-        tempHtml += "<h3><b>Top jucatori:</b></h3>\n";
+        tempHtml += "<h4><b>Top jucatori:</b></h4>\n";
         tempHtml += "<table class=\"topJuc\" style=\"color: aliceblue\">\n";
         for (i = 0; i < userAndPoints.length - 1; i++){
             var user = userAndPoints[i].split("<<<|<<<")[0];

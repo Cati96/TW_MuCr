@@ -8,6 +8,62 @@ var curent=0;
 var consum=0;
 var apa=0;
 var consumApa=0;
+var misiuni_terminate=[0];
+var misiuni=[];
+//misiune 1
+var m1=new Object();
+m1.bani=100;
+m1.poppulatie=1;
+m1.curent=1;
+m1.utilitati=1;
+m1.recompensa=50;
+m1.id=1;
+misiuni.push(m1);
+
+//misiune 2
+var m2=new Object();
+m2.bani=200;
+m2.poppulatie=5;
+m2.curent=2;
+m2.utilitati=1;
+m2.recompensa=150;
+m2.id=2;
+misiuni.push(m2);
+
+
+//misiune 3
+var m3=new Object();
+m3.bani=200;
+m3.poppulatie=5;
+m3.curent=2;
+m3.utilitati=1;
+m3.recompensa=350;
+m3.id=3;
+misiuni.push(m3);
+
+
+//misiune 4
+var m4=new Object();
+m4.bani=200;
+m4.poppulatie=5;
+m4.curent=2;
+m4.utilitati=1;
+m4.recompensa=750;
+m4.id=4;
+misiuni.push(m4);
+
+
+//misiune 1
+var m5=new Object();
+m5.bani=200;
+m5.poppulatie=5;
+m5.curent=2;
+m5.utilitati=1;
+m5.recompensa=10050;
+m5.id=5;
+misiuni.push(m5);
+
+
 
 var nivelJucator=1;
 var puncteJucator=0;
