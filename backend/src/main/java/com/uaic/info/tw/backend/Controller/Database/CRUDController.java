@@ -184,4 +184,19 @@ public class CRUDController {
 		System.out.println("UserId by username: " + userId);
 		return userId;
 	}
+
+	public int getPointsForUser(String userId) throws SQLException {
+		String query = "SELECT * FROM RANK WHERE user_id = ?";
+		PreparedStatement pstm = Variables.DB_CONN.prepareStatement(query);
+		pstm.setInt(1, Integer.parseInt(userId));
+
+		ResultSet rs = pstm.executeQuery();
+
+		int response = 0;
+		while (rs.next()) {
+			response = rs.getInt("points");
+		}
+		System.out.println("Puncte: " + response);
+		return response;
+	}
 }

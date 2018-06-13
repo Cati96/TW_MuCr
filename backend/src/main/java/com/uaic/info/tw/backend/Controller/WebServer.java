@@ -4,6 +4,7 @@ import java.net.InetSocketAddress;
 
 import com.sun.net.httpserver.HttpServer;
 import com.uaic.info.tw.backend.Controller.Servlet.LoginServlet;
+import com.uaic.info.tw.backend.Controller.Servlet.MissionsServlet;
 import com.uaic.info.tw.backend.Controller.Servlet.RankServlet;
 import com.uaic.info.tw.backend.Controller.Servlet.RegisterServlet;
 import com.uaic.info.tw.backend.Controller.Servlet.SaveDataServlet;
@@ -20,6 +21,7 @@ public class WebServer {
 		server.createContext("/login", new LoginServlet());
 		server.createContext("/rank", new RankServlet());
 		server.createContext("/save", new SaveDataServlet());
+		server.createContext("/missions", new MissionsServlet());
 		
 		server.setExecutor(null); // creates a default executor
 	}
