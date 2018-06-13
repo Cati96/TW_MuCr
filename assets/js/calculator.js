@@ -110,6 +110,30 @@ function getPrimarieClass(){
 	return $("#main_activity").attr("class");
 	
 }
+
+function defineNextLevel(){
+     $.get("http://127.0.0.1:8111/missions",{
+        profil1: $.cookie("userId")
+    }, function(data2){
+        nivelJucator = parseInt(data2 / 1000, 10);
+        puncteJucator = data2;
+        console.log("niv jucator in missions " + nivelJucator);
+         
+        if(nivelJucator===1){
+            var target = "Hei " + usernameJucator + ". Observ esti nou venit printe noi.\n Eu te voi ghida de-a lungul jocului si-ti voi spune\ncum sa castigi mai multe puncte.\n";
+            target += "Pentru a ajunge la nivelul 2 construiste o casa de nivel1.\nAsa vei primi un bonus de 100 de bani.";
+            
+            var toHtml ='<img src="' + imagineProfil + '" class="imagine_profil"/>';
+            toHtml += '<img src = "assets/img/text-box-png-11.png" class="balon-tooltip-dialog"/>\n';
+            toHtml += '<p class="text-tooltip-dialog">' + target + '</p>';
+            
+            console.log("Tooltip: " + toHtml);
+        }
+         
+        console.log("Ajunge aici");
+    });
+}
+
 function loadData(code){
 	var ldata=JSON.parse(atob(code));
 	bani=ldata.bani;
@@ -133,4 +157,16 @@ $(document).ready(function () {
 		window.setInterval(saveData,5000);
 	}
 	
+});
+
+
+$(document).ready(function(){
+    setTimeout(function () {
+        defineNextLevel();
+        $(".tooltip").show();    
+    }, 20000)
+    
+    setTimeout(function () {
+        $(".tooltip").hide();
+    }, 50000)
 });

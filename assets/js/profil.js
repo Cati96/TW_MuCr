@@ -23,13 +23,16 @@ function populateAnime(id) {
 		x.complete(function (data) {
 			jucator.info = data.responseJSON.data;
 			$("#showProfil").click(function () {
-				$("#numej").html(jucatorTemp.split("<>|<>")[1]);
+                usernameJucator = jucatorTemp.split("<>|<>")[1];
+				$("#numej").html(usernameJucator);
+                $("#punctej").html(puncteJucator);
+                $("#nivelj").html(nivelJucator);
 				$("#numep").html(jucator.info.attributes.names.en);
 				$("#povp").html(jucator.info.attributes.description);
 				
-				var temp_name = jucator.info.attributes.image.original;
+				imagineProfil = jucator.info.attributes.image.original;
 				var temp_html = '';
-				temp_html += '<img src="' + temp_name + '" class="imagine_profil"/>';
+				temp_html += '<img src="' + imagineProfil + '" class="imagine_profil"/>';
 				$("#pozec").html(temp_html);
 		});
 	});
