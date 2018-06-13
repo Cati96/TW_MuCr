@@ -686,6 +686,10 @@ table {
 	width: 300px;
 }
 
+.formular input[type="password"] {
+	width: 300px;
+}
+
 .pinfo {
 	position: absolute;
 	border-style: ridge;
