@@ -6,50 +6,56 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>WAR OF MAIRES</title>
-    <link href="assets/css/style.css" rel="stylesheet">
-	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" /> 
-</head>
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" /> </head>
+
 <body>
-	<div class="body" >
-		<div id="home" >
+	<div class="body">
+		<div id="home">
 			<!-- Main nav -->
 			<nav class="navbar ">
-			
 				<div class="container">
 					<div style="width: 50%;margin: 0;float: left">
-						<a class="" href="#home"><img style="width:300px; height: 100x; padding-left: 50px; padding-bottom: 35px" src="assets/img/warOfMairesLogo.png" /></a>
+						<a class="" href="index.html"><img style="width:300px; height: 100x; padding-left: 50px; padding-bottom: 35px" src="assets/img/warOfMairesLogo.png" /></a>
 					</div>
 					<div style="width:50%;display:inline-block;float: left;" id="main-nav"> </div>
 				</div>
-				
 			</nav>
 		</div>
 		<div class="Divider"> </div>
 	</div>
-	
 	<div class="body main-page">
 		<div class="formular">
 			<label>User</label>
 			<br>
 			<div class="Input">
-			<input type="text" id="username"  class="Input-text" /> </div></div>
+				<input type="text" id="username" class="Input-text" /> </div>
+		</div>
 		<div class="formular">
 			<label>Parola</label>
-			<br><div class="Input">
-			<input type="text" id="password"  class="Input-text" /></div> </div>
+			<br>
+			<div class="Input">
+				<input type="password" id="password" class="Input-text" />
+			</div>
+		</div>
 		<div class="formular">
 			<label>Email</label>
-			<br><div class="Input">
-			<input type="text" id="email"  class="Input-text" /></div> </div>
+			<br>
+			<div class="Input">
+				<input type="text" id="email" class="Input-text" />
+			</div>
+		</div>
 		<div class="formular">
 			<label>Nume si prenume</label>
-			<br><div class="Input">
-			<input type="text" id="fname" class="Input-text"  /> </div></div>
+			<br>
+			<div class="Input">
+				<input type="text" id="fname" class="Input-text" /> </div>
+		</div>
 		<div class="avatar">
 			<label>Avatar</label>
-			<br> <select></select>
-        </div>
-		<button class="btn btn-primary buton_register" style="margin:30px;">Inregistreaza-te</button>
+			<br>
+		</div>
+		<button class="btn btn-primary buton_register" style="margin:30px;" id="register">Inregistreaza-te</button>
 		<button class="btn btn-primary buton_register" style="margin:30px;" onclick="window.location.href='index.html';">Inapoi la pagina principala</button>
 		<div class="Divider5"> </div>
 		<div class="pinfo"> <img class="selected-profile " id="0" />
@@ -59,11 +65,9 @@
 			<p id="poveste">Poveste</p>
 		</div>
 	</div>
-	
 	<div class="body pattern-dark">
 		<footer class="container footer">
 			<div class="row">
-			
 				<div class='footer'>
 					<ul class="nav2">
 						<li><a href="#theGame">Joc</a></li>
@@ -72,16 +76,15 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
-				
 			</div>
 			<div class="row">
 				<p class="copyright"></p>
 			</div>
 		</footer>
 	</div>
-	
 	<!-- ============== SCRIPTS =============== -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
+	<script src="assets/js/jquery-1.12.4.min.js"></script>
+	<script src="assets/js/cookie.js"></script>
 	<script src="assets/js/register.js"></script>
 </body>
 

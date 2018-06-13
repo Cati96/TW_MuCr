@@ -18,18 +18,18 @@
 			<nav class="navbar ">
 				<div class="container">
 					<div style="width: 50%;margin: 0;float: left">
-						<a class="" href="#home"><img style="width:300px; height: 100x; padding-left: 50px; padding-bottom: 35px" src="assets/img/warOfMairesLogo.png" /></a>
+						<a class="" href="index.html"><img style="width:300px; height: 100x; padding-left: 50px; padding-bottom: 35px" src="assets/img/warOfMairesLogo.png" /></a>
 					</div>
 					<div style="width:50%;display:inline;" id="main-nav">
 						<ul class="nav">
-                            <li><a href="register.html" >Register</a></li>
-							<li><a href="#" id="loginbtn">Login</a></li>			
+                            <li class="not_logged"><a href="register.html" >Register</a></li>
+							<li class="not_logged"><a href="#" id="loginbtn">Login</a></li>			
                             <li><a href="#contact">Contact</a></li>
 							<li><a href="#informations">Informatii joc</a></li>
 							<li><a href="#ranking">Clasament Jucatori</a></li>
                             <li><a href="#theGame">Game</a></li>
-                            <li><a href="#" id="showProfil">Profil</a></li>
-                            <li><a href="#logout">Log out</a></li>
+                            <li class="logged"><a href="#" id="showProfil">Profil</a></li>
+                            <li class="logged"><a href="#" id="logout_link">Log out</a></li>
 						</ul>
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 		</section>
 	</div>
 	<div class="body">
-		<table class=primarie1>
+		<table class="primarie1" id="main_activity">
 			<tr>
 				<td class="caseta4 space free" id="1"></td>
 				<td class="caseta4 space free" id="2"></td>
@@ -212,14 +212,14 @@
 					<h4 class="modal-title">Login</h4> </div>
 				<div class="modal-body">
 					<div class="input-form">
-						<label id="labelLogin">Username:</label>
-						<input class="Input-text" type="text" placeholder="Username"> </div>
+						<label >Username:</label>
+						<input class="Input-text" type="text" placeholder="Username" id="login_username"> </div>
 					<div class="input-form">
                         <br>
-						<label id="labelLogin">Password:</label>
-						<input class="Input-text" type="password" placeholder="Password"> </div>
+						<label >Password:</label>
+						<input class="Input-text" type="password" placeholder="Password" id="login_password"> </div>
                     <br>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Login</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="login_button_modal">Login</button>
 				</div>
 				<div class="modal-footer">
                     <br><br><br>
@@ -264,41 +264,6 @@
 	<!-- ============== RANKING SECTION =============== -->
 	<div class="row pattern">
 		<section class="ranking" id="ranking">
-			<div class="container">
-				<h3><b>Top 5 jucatori:</b></h3>
-				<table class="top5" style="color: aliceblue">
-					<tr>
-						<td>
-							<p>1. Player1</p>
-						</td>
-						<td>3211</td>
-					</tr>
-					<tr>
-						<td>
-							<p>2. Player2</p>
-						</td>
-						<td>3122</td>
-					</tr>
-					<tr>
-						<td>
-							<p>3. Player3</p>
-						</td>
-						<td>3111</td>
-					</tr>
-					<tr>
-						<td>
-							<p>4. Player4</p>
-						</td>
-						<td>3019</td>
-					</tr>
-					<tr>
-						<td>
-							<p>5. Player5</p>
-						</td>
-						<td>3000</td>
-					</tr>
-				</table>
-			</div>
 		</section>
 		<div class="Divider3"> </div>
 	</div>
@@ -341,6 +306,7 @@
 	</script>-->
 	<!-- ============== SCRIPTS =============== -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
+	<script src="assets/js/cookie.js"></script>
 	<script src="assets/js/constante.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/calculator.js"></script>

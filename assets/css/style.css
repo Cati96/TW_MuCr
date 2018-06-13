@@ -392,7 +392,7 @@ h1 {
 	bottom: 130px;
 }
 
-.top5 {
+.topJuc {
     color: white;
     width: 500px;
     height: 20px;
@@ -602,7 +602,7 @@ h3 {
 	border: 1px solid gold;
     height: 35px;
     width: 100px;
-    float: right;    
+    float: none;    
 }
 
 .btn-upgrade {
@@ -683,6 +683,10 @@ table {
 }
 
 .formular input[type="text"] {
+	width: 300px;
+}
+
+.formular input[type="password"] {
 	width: 300px;
 }
 
